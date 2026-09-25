@@ -1,26 +1,113 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-brand: oklch(43.86% 0.1372 254.5);
+  --color-brand-bright: oklch(51.56% 0.1632 254.73);
+  --color-brand-light: oklch(62.84% 0.1382 249.31);
+  --color-leaf: oklch(72.74% 0.1912 131.82);
+  --color-leaf-deep: oklch(60.97% 0.1634 132.07);
+  --color-cream: oklch(98.48% 0.0054 95.1);
+  --color-mist: oklch(97.5% 0.0062 255.47);
+  --color-sprout: oklch(97.08% 0.0195 125.81);
+  --color-ink: oklch(24.5% 0.0411 247.33);
+  --color-ink-soft: oklch(45.95% 0.0303 244.93);
+  --color-hairline: oklch(93.71% 0.0132 251.56);
+  --color-hairline-leaf: oklch(95.12% 0.0318 124.47);
+  --color-primary-foreground: #ffffff;
+  --color-ring: oklch(51.56% 0.1632 254.73);
+
+  --shadow-soft: 0 1px 2px oklch(43.86% 0.1372 254.5 / 0.04), 0 8px 24px -12px oklch(43.86% 0.1372 254.5 / 0.14);
+  --shadow-lift: 0 2px 4px oklch(43.86% 0.1372 254.5 / 0.05), 0 24px 48px -20px oklch(43.86% 0.1372 254.5 / 0.22);
+  --shadow-float: 0 40px 80px -32px oklch(43.86% 0.1372 254.5 / 0.34);
+
+  --animate-float-slow: float-slow 9s ease-in-out infinite;
+  --animate-float-mid: float-slow 7s ease-in-out infinite;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
   }
 }
 
+:root {
+  --radius: 1.25rem;
+  --background: #ffffff;
+  --foreground: oklch(24.5% 0.0411 247.33);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.container-page {
+  width: 100%;
+  max-width: 78rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container-page {
+    padding-inline: 2rem;
+  }
+}
+
+.eyebrow {
+  border: 1px solid var(--color-hairline);
+  background: color-mix(in oklab, var(--color-cream) 70%, white);
+  border-radius: 9999px;
+  align-items: center;
+  gap: 0.5rem;
+  display: inline-flex;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-brand);
+  padding: 0.375rem 0.875rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.text-gradient-brand {
+  background: linear-gradient(100deg, var(--color-brand) 0%, var(--color-brand-bright) 45%, var(--color-leaf-deep) 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.surface-card {
+  border: 1px solid var(--color-hairline);
+  box-shadow: var(--shadow-soft);
+  background: #ffffff;
+  border-radius: 1.5rem;
+}
+
+.reveal {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0s);
+  transform: translateY(22px);
+}
+
+.is-revealed {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
