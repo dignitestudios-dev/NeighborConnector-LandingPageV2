@@ -5,7 +5,9 @@ export const metadata = {
   description:
     "A free app from a nonprofit: build a small, private circle of neighbors, friends, and family to check in, ask for help, and stay connected. No ads, no public feeds.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/assets/logo-trim.png",
+    shortcut: "/assets/logo-trim.png",
+    apple: "/assets/logo-trim.png",
   },
   openGraph: {
     title: "NeighborConnector™ — Private Circles for Neighbors & Family",

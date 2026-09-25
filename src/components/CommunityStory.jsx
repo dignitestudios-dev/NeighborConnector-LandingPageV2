@@ -30,10 +30,10 @@ export function CommunityStory() {
               Community Starts With Connection
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-ink-soft">
-              We have never had more ways to communicate. Yet neighbors, friends, and family often remain unaware of the support waiting a few doors away. Loneliness and isolation have become a serious health concern, especially for older adults and neighbors who could use a hand.
+              We have never had more ways to communicate. Yet neighbors, friend, and family often remain unaware of the support waiting a few doors away. Loneliness and isolation have become a serious health concern, especially for older adults and neighbors who could use a hand.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-ink-soft">
-              NeighborConnector™ takes a quieter path: a handful of people you already know, in one private circle, close enough to actually show up for each other.
+              NeighborConnector™ takes a quieter path: a handful of people you already know, in one private circle, close enough to actually show up for each other. Users may belong to more than one circle for various needs.
             </p>
           </Reveal>
 

@@ -23,7 +23,7 @@ const VALUE_PROPS = [
   {
     icon: Gift,
     title: "100% Free",
-    description: "Powered by volunteers and Community Care Housing.",
+    description: "Powered by donors and Community Care Housing.",
     delay: 210,
   },
 ];
