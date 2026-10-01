@@ -47,17 +47,18 @@ export function DownloadCta() {
                     className="h-12 w-auto"
                   />
                 </a>
-                <div className="flex items-center gap-3 rounded-3xl bg-white/10 p-3 pr-5">
+
+                <div className="flex items-center gap-3.5 rounded-2xl bg-white/10 p-3 pr-5 border border-white/15 backdrop-blur-md shadow-soft">
                   <img
                     src="/assets/qrcode.png"
                     alt="QR code linking to the NeighborConnector app download"
-                    className="size-16 rounded-xl bg-white p-1"
+                    className="size-20 sm:size-24 rounded-xl bg-white p-1.5 shadow-soft"
                   />
-                  <span className="text-sm font-medium text-white/80">
-                    Scan to
-                    <br />
-                    download
-                  </span>
+                  <div className="text-xs sm:text-sm leading-tight text-white">
+                    <p className="font-extrabold tracking-wide">Scan with phone</p>
+                    <p className="text-xs text-white/80 mt-1">Instant App Download</p>
+                    <p className="text-[11px] text-white/60 mt-0.5">iOS & Android</p>
+                  </div>
                 </div>
               </div>
 

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 
 export function Footer() {
@@ -6,11 +7,13 @@ export function Footer() {
       <div className="container-page py-14 md:py-16">
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <img
-              src="/assets/logo-trim.png"
-              alt="NeighborConnector"
-              className="h-10 w-auto"
-            />
+            <Link href="/">
+              <img
+                src="/assets/logo-trim.png"
+                alt="NeighborConnector"
+                className="h-10 w-auto"
+              />
+            </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-ink-soft">
               NeighborConnector™ is a free app by Community Care Housing Foundation, a nonprofit dedicated to affordable housing and stronger, more supportive communities.
             </p>
@@ -20,52 +23,52 @@ export function Footer() {
             <h2 className="text-sm font-semibold text-ink">Explore</h2>
             <ul className="mt-4 space-y-3">
               <li>
-                <a
-                  href="#features"
+                <Link
+                  href="/#features"
                   className="text-sm text-ink-soft transition-colors hover:text-brand"
                 >
                   Features
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#how-it-works"
+                <Link
+                  href="/#how-it-works"
                   className="text-sm text-ink-soft transition-colors hover:text-brand"
                 >
                   How It Works
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#why"
+                <Link
+                  href="/#why"
                   className="text-sm text-ink-soft transition-colors hover:text-brand"
                 >
                   Why NeighborConnector
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#faq"
+                <Link
+                  href="/#faq"
                   className="text-sm text-ink-soft transition-colors hover:text-brand"
                 >
                   FAQ
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#about"
+                <Link
+                  href="/#about"
                   className="text-sm text-ink-soft transition-colors hover:text-brand"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#download"
+                <Link
+                  href="/#download"
                   className="text-sm text-ink-soft transition-colors hover:text-brand"
                 >
                   Download
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
