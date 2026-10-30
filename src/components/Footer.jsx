@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="border-t border-hairline bg-white">
       <div className="container-page py-14 md:py-16">
-        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Link href="/">
               <img
@@ -19,9 +19,17 @@ export function Footer() {
             </p>
           </div>
 
-          <nav aria-label="Footer">
+          <nav aria-label="Explore Navigation">
             <h2 className="text-sm font-semibold text-ink">Explore</h2>
             <ul className="mt-4 space-y-3">
+              <li>
+                <Link
+                  href="/"
+                  className="text-sm text-ink-soft transition-colors hover:text-brand"
+                >
+                  Home
+                </Link>
+              </li>
               <li>
                 <Link
                   href="/#features"
@@ -40,14 +48,6 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/#why"
-                  className="text-sm text-ink-soft transition-colors hover:text-brand"
-                >
-                  Why NeighborConnector
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/#faq"
                   className="text-sm text-ink-soft transition-colors hover:text-brand"
                 >
@@ -62,12 +62,50 @@ export function Footer() {
                   About
                 </Link>
               </li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Why & Guides Navigation">
+            <h2 className="text-sm font-semibold text-ink">Why NeighborConnector</h2>
+            <ul className="mt-4 space-y-3">
               <li>
                 <Link
-                  href="/#download"
+                  href="/how-it-works/core-features"
                   className="text-sm text-ink-soft transition-colors hover:text-brand"
                 >
-                  Download
+                  Discover the Possibilities
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/why-it-matters"
+                  className="text-sm text-ink-soft transition-colors hover:text-brand"
+                >
+                  What, Who &amp; Why It Matters
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/how-it-works/circle-living"
+                  className="text-sm text-ink-soft transition-colors hover:text-brand"
+                >
+                  Circle Living™
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/companion-worksheet"
+                  className="text-sm text-ink-soft transition-colors hover:text-brand"
+                >
+                  Companion Worksheet
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/how-it-works/get-started"
+                  className="text-sm text-ink-soft transition-colors hover:text-brand"
+                >
+                  8-Step Roadmap
                 </Link>
               </li>
             </ul>

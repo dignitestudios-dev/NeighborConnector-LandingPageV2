@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Reveal } from "@/components/Reveal";
+import { CompanionWorksheet } from "@/components/CompanionWorksheet";
 import { DownloadCta } from "@/components/DownloadCta";
 import { Footer } from "@/components/Footer";
 
@@ -235,6 +236,7 @@ export default function CircleLivingPage() {
           </div>
         </section>
 
+        <CompanionWorksheet />
         <DownloadCta />
       </main>
 

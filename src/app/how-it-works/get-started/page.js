@@ -78,14 +78,14 @@ export default function GetStartedPage() {
             </div>
 
             {/* Why It Matters Section */}
-            <div className="mt-14">
+            <div id="why-it-matters" className="mt-14 scroll-mt-28">
               <Reveal delay={40}>
                 <div className="flex items-center gap-2.5">
                   <span className="grid size-9 place-items-center rounded-xl bg-sprout text-leaf-deep">
                     <Lightbulb className="size-5" />
                   </span>
-                  <h2 className="text-2xl font-bold text-ink">
-                    Why It Matters
+                  <h2 className="text-2xl sm:text-3xl font-bold text-ink">
+                    What, Who & Why It Matters Guide
                   </h2>
                 </div>
               </Reveal>
