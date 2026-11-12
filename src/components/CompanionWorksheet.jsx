@@ -98,14 +98,16 @@ export function CompanionWorksheet() {
               </p>
             </div>
 
-            <button
-              type="button"
-              onClick={handlePrint}
-              className="print:hidden inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white shadow-lift hover:bg-brand-bright transition-all cursor-pointer self-start sm:self-auto shrink-0"
-            >
-              <Printer className="size-4" />
-              <span>Print Worksheet</span>
-            </button>
+            <div className="flex flex-wrap items-center gap-3 self-start sm:self-auto shrink-0 print:hidden">
+              <button
+                type="button"
+                onClick={handlePrint}
+                className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white shadow-lift hover:bg-brand-bright transition-all cursor-pointer"
+              >
+                <Printer className="size-4" />
+                <span>Download the Companion Worksheet (FREE)</span>
+              </button>
+            </div>
           </div>
         </Reveal>
 
