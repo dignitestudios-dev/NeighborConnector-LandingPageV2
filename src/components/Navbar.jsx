@@ -5,23 +5,30 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   ArrowRight,
+  Award,
   ChevronDown,
   Compass,
+  FileDown,
   FileSpreadsheet,
   FileText,
   HeartHandshake,
+  HelpCircle,
   Home,
   LayoutGrid,
+  Megaphone,
   Menu,
   Rocket,
+  Smartphone,
+  Sparkles,
+  Users,
   X,
 } from "lucide-react";
 import clsx from "clsx";
 
 const WHY_DROPDOWN = [
   {
-    title: "Discover the Possibilities",
-    description: "Explore mutual support, practical tools & reassurance",
+    title: "Explore the Possibilities",
+    description: "Combines How NC Can Help, Who Comes to Mind, What It Can Do & Why It Matters",
     href: "/how-it-works/core-features",
     icon: Compass,
     subLink: {
@@ -45,22 +52,55 @@ const WHY_DROPDOWN = [
 
 const HOW_IT_WORKS_DROPDOWN = [
   {
-    title: "Circle Living™",
+    title: "Your Circle(s) are Waiting",
     description: "Small circles, real relationships & mutual support",
     href: "/how-it-works/circle-living",
     icon: HeartHandshake,
   },
   {
-    title: "Core Features",
-    description: "Daily check-ins, chores, rides & support rings",
-    href: "/how-it-works/core-features",
-    icon: LayoutGrid,
-  },
-  {
-    title: "Get Started",
-    description: "8-step roadmap to put NeighborConnector to work",
+    title: "8-Step Roadmap",
+    description: "Putting NeighborConnector to work step by step",
     href: "/how-it-works/get-started",
     icon: Rocket,
+  },
+  {
+    title: "Features",
+    description: "Everything you need to stay connected and coordinate",
+    href: "/#features",
+    icon: LayoutGrid,
+  },
+];
+
+const RESOURCES_DROPDOWN = [
+  {
+    title: "Downloadable Handouts",
+    description: "Printable guides, the What/Who/Why Guide & Companion Worksheet",
+    href: "/resources/downloadable-handouts",
+    icon: FileDown,
+  },
+  {
+    title: "FAQs",
+    description: "Answers about privacy, daily check-in setup & mutual aid",
+    href: "/resources/faqs",
+    icon: HelpCircle,
+  },
+  {
+    title: "App Screenshots",
+    description: "Visual walkthrough of the circle feed, daily check-in & requests",
+    href: "/resources/app-screenshots",
+    icon: Smartphone,
+  },
+  {
+    title: "Outreach Materials",
+    description: "Invitation flyers, neighbor scripts & community announcement blurbs",
+    href: "/resources/outreach-materials",
+    icon: Megaphone,
+  },
+  {
+    title: "Acknowledgements",
+    description: "Honoring our founding nonprofit partners, advisors & volunteer champions",
+    href: "/resources/acknowledgements",
+    icon: Award,
   },
 ];
 
@@ -72,13 +112,16 @@ export function Navbar() {
   // Desktop dropdown states
   const [whyDropdownOpen, setWhyDropdownOpen] = useState(false);
   const [howDropdownOpen, setHowDropdownOpen] = useState(false);
+  const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
 
   // Mobile submenu accordion states
-  const [mobileWhyOpen, setMobileWhyOpen] = useState(true);
+  const [mobileWhyOpen, setMobileWhyOpen] = useState(false);
   const [mobileHowOpen, setMobileHowOpen] = useState(false);
+  const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
 
   const whyTimerRef = useRef(null);
   const howTimerRef = useRef(null);
+  const resourcesTimerRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -93,13 +136,16 @@ export function Navbar() {
   useEffect(() => {
     setWhyDropdownOpen(false);
     setHowDropdownOpen(false);
+    setResourcesDropdownOpen(false);
     setMobileOpen(false);
   }, [pathname]);
 
   const handleWhyMouseEnter = () => {
     if (whyTimerRef.current) clearTimeout(whyTimerRef.current);
     if (howTimerRef.current) clearTimeout(howTimerRef.current);
+    if (resourcesTimerRef.current) clearTimeout(resourcesTimerRef.current);
     setHowDropdownOpen(false);
+    setResourcesDropdownOpen(false);
     setWhyDropdownOpen(true);
   };
 
@@ -112,7 +158,9 @@ export function Navbar() {
   const handleHowMouseEnter = () => {
     if (howTimerRef.current) clearTimeout(howTimerRef.current);
     if (whyTimerRef.current) clearTimeout(whyTimerRef.current);
+    if (resourcesTimerRef.current) clearTimeout(resourcesTimerRef.current);
     setWhyDropdownOpen(false);
+    setResourcesDropdownOpen(false);
     setHowDropdownOpen(true);
   };
 
@@ -122,19 +170,20 @@ export function Navbar() {
     }, 150);
   };
 
-  const isWhyActive =
-    pathname === "/why-it-matters" ||
-    pathname === "/companion-worksheet" ||
-    pathname === "/circle-living" ||
-    pathname === "/how-it-works/circle-living";
+  const handleResourcesMouseEnter = () => {
+    if (resourcesTimerRef.current) clearTimeout(resourcesTimerRef.current);
+    if (whyTimerRef.current) clearTimeout(whyTimerRef.current);
+    if (howTimerRef.current) clearTimeout(howTimerRef.current);
+    setWhyDropdownOpen(false);
+    setHowDropdownOpen(false);
+    setResourcesDropdownOpen(true);
+  };
 
-  const isHowItWorksActive =
-    pathname.startsWith("/how-it-works") ||
-    pathname === "/core-features" ||
-    pathname === "/app-and-rings" ||
-    pathname === "/get-started";
-
-  const isHomeActive = pathname === "/";
+  const handleResourcesMouseLeave = () => {
+    resourcesTimerRef.current = setTimeout(() => {
+      setResourcesDropdownOpen(false);
+    }, 150);
+  };
 
   return (
     <header
@@ -149,30 +198,27 @@ export function Navbar() {
         aria-label="Main"
         className="container-page grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-3 md:py-4"
       >
-        {/* Logo / Brand */}
+        {/* Logo / Brand - Bigger logo */}
         <Link href="/" className="flex min-w-0 items-center">
           <img
             src="/assets/logo-trim.png"
             alt="NeighborConnector logo"
             width="2838"
             height="1688"
-            className="h-9 w-auto md:h-11"
+            className="h-11 w-auto sm:h-12 md:h-14 transition-all"
           />
           <span className="sr-only">NeighborConnector home</span>
         </Link>
 
-        {/* Desktop Navigation Links */}
+        {/* Desktop Navigation Links: Home, Why NeighborConnector ▾, How It Works ▾, Resources ▾, About, Contact, Get Started */}
         <div className="flex items-center gap-1">
           <ul className="hidden items-center gap-1 lg:flex">
-            {/* Home Button */}
+            {/* 1. Home */}
             <li>
               <Link
                 href="/"
                 className={clsx(
-                  "inline-flex items-center gap-1.5 rounded-full px-3.5 py-2 text-sm font-medium transition-colors",
-                  isHomeActive && !whyDropdownOpen && !howDropdownOpen
-                    ? "bg-mist text-brand font-semibold"
-                    : "text-ink-soft hover:bg-mist hover:text-brand"
+                  "inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-sm font-medium transition-colors text-ink-soft hover:bg-mist hover:text-brand"
                 )}
               >
                 <Home className="size-3.5" aria-hidden="true" />
@@ -180,7 +226,7 @@ export function Navbar() {
               </Link>
             </li>
 
-            {/* Why NeighborConnector with Dropdown */}
+            {/* 2. Why NeighborConnector with Dropdown */}
             <li
               className="relative"
               onMouseEnter={handleWhyMouseEnter}
@@ -190,8 +236,8 @@ export function Navbar() {
                 type="button"
                 onClick={() => setWhyDropdownOpen((prev) => !prev)}
                 className={clsx(
-                  "inline-flex items-center gap-1 rounded-full px-3.5 py-2 text-sm font-medium transition-colors cursor-pointer",
-                  isWhyActive || whyDropdownOpen
+                  "inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium transition-colors cursor-pointer",
+                  whyDropdownOpen
                     ? "bg-mist text-brand font-semibold"
                     : "text-ink-soft hover:bg-mist hover:text-brand"
                 )}
@@ -275,18 +321,18 @@ export function Navbar() {
               </div>
             </li>
 
-            {/* How It Works with Dropdown */}
+            {/* 3. How It Works with Dropdown: Your Circle(s) are Waiting, 8-Step Roadmap, Features */}
             <li
               className="relative"
               onMouseEnter={handleHowMouseEnter}
               onMouseLeave={handleHowMouseLeave}
             >
-              <Link
-                href="/#how-it-works"
-                onClick={() => setHowDropdownOpen(false)}
+              <button
+                type="button"
+                onClick={() => setHowDropdownOpen((prev) => !prev)}
                 className={clsx(
-                  "inline-flex items-center gap-1 rounded-full px-3.5 py-2 text-sm font-medium transition-colors cursor-pointer",
-                  isHowItWorksActive || howDropdownOpen
+                  "inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium transition-colors cursor-pointer",
+                  howDropdownOpen
                     ? "bg-mist text-brand font-semibold"
                     : "text-ink-soft hover:bg-mist hover:text-brand"
                 )}
@@ -301,12 +347,12 @@ export function Navbar() {
                   )}
                   aria-hidden="true"
                 />
-              </Link>
+              </button>
 
               {/* How It Works Dropdown Menu */}
               <div
                 className={clsx(
-                  "absolute left-1/2 top-full -translate-x-1/2 pt-2 transition-all duration-200 w-80 z-50",
+                  "absolute left-1/2 top-full -translate-x-1/2 pt-2 transition-all duration-200 w-84 z-50",
                   howDropdownOpen
                     ? "opacity-100 translate-y-0 pointer-events-auto"
                     : "opacity-0 -translate-y-2 pointer-events-none"
@@ -322,18 +368,12 @@ export function Navbar() {
                   <div className="space-y-1">
                     {HOW_IT_WORKS_DROPDOWN.map((item) => {
                       const Icon = item.icon;
-                      const isItemActive = pathname === item.href;
                       return (
                         <Link
-                          key={item.href}
+                          key={item.title}
                           href={item.href}
                           onClick={() => setHowDropdownOpen(false)}
-                          className={clsx(
-                            "flex items-start gap-3 rounded-xl p-2.5 transition-all",
-                            isItemActive
-                              ? "bg-sprout/60 text-brand"
-                              : "hover:bg-mist text-ink hover:text-brand"
-                          )}
+                          className="flex items-start gap-3 rounded-xl p-2.5 transition-all hover:bg-mist text-ink hover:text-brand"
                         >
                           <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-white border border-hairline text-brand shadow-2xs mt-0.5">
                             <Icon className="size-4" aria-hidden="true" />
@@ -354,38 +394,109 @@ export function Navbar() {
               </div>
             </li>
 
-            {/* Features Link */}
-            <li>
-              <Link
-                href="/#features"
-                className="rounded-full px-3.5 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-mist hover:text-brand"
+            {/* 4. Resources with Dropdown: Downloadable Handouts, FAQs, App Screenshots, Outreach Materials, Acknowledgements */}
+            <li
+              className="relative"
+              onMouseEnter={handleResourcesMouseEnter}
+              onMouseLeave={handleResourcesMouseLeave}
+            >
+              <button
+                type="button"
+                onClick={() => setResourcesDropdownOpen((prev) => !prev)}
+                className={clsx(
+                  "inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium transition-colors cursor-pointer",
+                  resourcesDropdownOpen
+                    ? "bg-mist text-brand font-semibold"
+                    : "text-ink-soft hover:bg-mist hover:text-brand"
+                )}
+                aria-expanded={resourcesDropdownOpen}
+                aria-haspopup="true"
               >
-                Features
-              </Link>
+                <span>Resources</span>
+                <ChevronDown
+                  className={clsx(
+                    "size-4 transition-transform duration-200",
+                    resourcesDropdownOpen && "rotate-180 text-brand"
+                  )}
+                  aria-hidden="true"
+                />
+              </button>
+
+              {/* Resources Dropdown Menu */}
+              <div
+                className={clsx(
+                  "absolute left-1/2 top-full -translate-x-1/2 pt-2 transition-all duration-200 w-88 z-50",
+                  resourcesDropdownOpen
+                    ? "opacity-100 translate-y-0 pointer-events-auto"
+                    : "opacity-0 -translate-y-2 pointer-events-none"
+                )}
+              >
+                <div className="surface-card p-2.5 shadow-lift border border-hairline/80 bg-white/95 backdrop-blur-2xl rounded-2xl">
+                  <div className="px-3 py-2 border-b border-hairline mb-1 flex items-center justify-between">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-brand">
+                      Resources &amp; Toolkits
+                    </span>
+                    <Link
+                      href="/resources"
+                      onClick={() => setResourcesDropdownOpen(false)}
+                      className="text-[11px] font-semibold text-brand hover:underline"
+                    >
+                      View All
+                    </Link>
+                  </div>
+
+                  <div className="space-y-1">
+                    {RESOURCES_DROPDOWN.map((item) => {
+                      const Icon = item.icon;
+                      return (
+                        <Link
+                          key={item.title}
+                          href={item.href}
+                          onClick={() => setResourcesDropdownOpen(false)}
+                          className="flex items-start gap-3 rounded-xl p-2.5 transition-all group hover:bg-mist text-ink hover:text-brand"
+                        >
+                          <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-sprout/60 text-leaf-deep shadow-2xs mt-0.5 group-hover:scale-105 transition-transform">
+                            <Icon className="size-4" aria-hidden="true" />
+                          </span>
+                          <div className="min-w-0">
+                            <p className="text-sm font-bold leading-tight flex items-center justify-between">
+                              <span>{item.title}</span>
+                              <ArrowRight className="size-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-brand shrink-0 ml-1" />
+                            </p>
+                            <p className="text-xs text-ink-soft line-clamp-1 mt-0.5">
+                              {item.description}
+                            </p>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
             </li>
 
-            {/* FAQ Link */}
-            <li>
-              <Link
-                href="/#faq"
-                className="rounded-full px-3.5 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-mist hover:text-brand"
-              >
-                FAQ
-              </Link>
-            </li>
-
-            {/* About Link */}
+            {/* 5. About */}
             <li>
               <Link
                 href="/#about"
-                className="rounded-full px-3.5 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-mist hover:text-brand"
+                className="rounded-full px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-mist hover:text-brand"
               >
                 About
               </Link>
             </li>
+
+            {/* 6. Contact */}
+            <li>
+              <a
+                href="mailto:Info@CommunityCareHousing.org"
+                className="rounded-full px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-mist hover:text-brand"
+              >
+                Contact
+              </a>
+            </li>
           </ul>
 
-          {/* Top CTA Button */}
+          {/* 7. Get Started Top CTA Button */}
           <Link
             href="/#download"
             className="items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-semibold cursor-pointer transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed bg-brand text-primary-foreground shadow-lift hover:-translate-y-0.5 hover:bg-brand-bright h-10 px-5 py-2 ml-2 hidden sm:inline-flex"
@@ -495,13 +606,9 @@ export function Navbar() {
           {/* Mobile How It Works Submenu */}
           <li className="rounded-2xl border border-hairline/80 bg-mist/40 p-2.5">
             <div className="flex items-center justify-between">
-              <Link
-                href="/#how-it-works"
-                onClick={() => setMobileOpen(false)}
-                className="block px-2 py-1 text-base font-semibold text-brand hover:underline"
-              >
+              <span className="block px-2 py-1 text-base font-bold text-brand">
                 How It Works
-              </Link>
+              </span>
               <button
                 type="button"
                 aria-label="Toggle How It Works submenu"
@@ -523,7 +630,7 @@ export function Navbar() {
                   const Icon = item.icon;
                   return (
                     <Link
-                      key={item.href}
+                      key={item.title}
                       href={item.href}
                       onClick={() => setMobileOpen(false)}
                       className="flex items-center gap-3 rounded-xl px-2.5 py-2 text-sm font-medium text-ink hover:bg-white transition-colors"
@@ -542,26 +649,50 @@ export function Navbar() {
             )}
           </li>
 
-          {/* Mobile Features */}
-          <li>
-            <Link
-              href="/#features"
-              onClick={() => setMobileOpen(false)}
-              className="block rounded-2xl px-3 py-2 text-base font-medium text-ink transition-colors hover:bg-mist"
-            >
-              Features
-            </Link>
-          </li>
+          {/* Mobile Resources Submenu */}
+          <li className="rounded-2xl border border-hairline/80 bg-sprout/30 p-2.5">
+            <div className="flex items-center justify-between">
+              <span className="block px-2 py-1 text-base font-bold text-brand">
+                Resources
+              </span>
+              <button
+                type="button"
+                aria-label="Toggle Resources submenu"
+                onClick={() => setMobileResourcesOpen((prev) => !prev)}
+                className="p-1.5 text-brand rounded-lg hover:bg-white cursor-pointer"
+              >
+                <ChevronDown
+                  className={clsx(
+                    "size-4 transition-transform duration-200",
+                    mobileResourcesOpen && "rotate-180"
+                  )}
+                />
+              </button>
+            </div>
 
-          {/* Mobile FAQ */}
-          <li>
-            <Link
-              href="/#faq"
-              onClick={() => setMobileOpen(false)}
-              className="block rounded-2xl px-3 py-2 text-base font-medium text-ink transition-colors hover:bg-mist"
-            >
-              FAQ
-            </Link>
+            {mobileResourcesOpen && (
+              <div className="mt-2 space-y-1 pt-1 border-t border-hairline">
+                {RESOURCES_DROPDOWN.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <Link
+                      key={item.title}
+                      href={item.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="flex items-center gap-3 rounded-xl px-2.5 py-2 text-sm font-medium text-ink hover:bg-white transition-colors"
+                    >
+                      <span className="grid size-7 place-items-center rounded-lg bg-white text-leaf-deep shrink-0 border border-hairline">
+                        <Icon className="size-3.5" />
+                      </span>
+                      <div>
+                        <p className="text-sm font-semibold">{item.title}</p>
+                        <p className="text-xs text-ink-soft line-clamp-1">{item.description}</p>
+                      </div>
+                    </Link>
+                  );
+                })}
+              </div>
+            )}
           </li>
 
           {/* Mobile About */}
@@ -573,6 +704,17 @@ export function Navbar() {
             >
               About
             </Link>
+          </li>
+
+          {/* Mobile Contact */}
+          <li>
+            <a
+              href="mailto:Info@CommunityCareHousing.org"
+              onClick={() => setMobileOpen(false)}
+              className="block rounded-2xl px-3 py-2 text-base font-medium text-ink transition-colors hover:bg-mist"
+            >
+              Contact
+            </a>
           </li>
 
           {/* Mobile CTA */}

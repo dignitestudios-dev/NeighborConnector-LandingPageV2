@@ -73,7 +73,7 @@ export function Footer() {
                   href="/how-it-works/core-features"
                   className="text-sm text-ink-soft transition-colors hover:text-brand"
                 >
-                  Discover the Possibilities
+                  Explore the Possibilities
                 </Link>
               </li>
               <li>

@@ -77,55 +77,6 @@ export default function GetStartedPage() {
               </Reveal>
             </div>
 
-            {/* Why It Matters Section */}
-            <div id="why-it-matters" className="mt-14 scroll-mt-28">
-              <Reveal delay={40}>
-                <div className="flex items-center gap-2.5">
-                  <span className="grid size-9 place-items-center rounded-xl bg-sprout text-leaf-deep">
-                    <Lightbulb className="size-5" />
-                  </span>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-ink">
-                    What, Who & Why It Matters Guide
-                  </h2>
-                </div>
-              </Reveal>
-
-              <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {WHY_IT_MATTERS.map((item, idx) => (
-                  <Reveal
-                    key={item.title}
-                    delay={idx * 60}
-                    className="surface-card p-5 sm:p-6 transition-transform hover:-translate-y-1"
-                  >
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="size-5 shrink-0 text-leaf-deep mt-0.5" />
-                      <div>
-                        <h3 className="text-base font-bold text-ink">
-                          {item.title}
-                        </h3>
-                        <p className="mt-1 text-sm text-ink-soft leading-relaxed">
-                          {item.text}
-                        </p>
-                      </div>
-                    </div>
-                  </Reveal>
-                ))}
-              </div>
-            </div>
-
-            {/* Quote Card */}
-            <Reveal delay={100} className="mt-12">
-              <div className="relative overflow-hidden rounded-3xl border border-hairline-leaf bg-gradient-to-br from-cream via-white to-sprout/40 p-7 sm:p-10 shadow-soft">
-                <Quote className="size-10 text-leaf-deep/40 mb-3" />
-                <blockquote className="text-lg sm:text-xl font-medium text-ink italic leading-relaxed">
-                  “You may already have meaningful relationships. NeighborConnector™ gives you a shared place to coordinate everyday life, help one another, communicate, and stay further connected. Make a difference together.”
-                </blockquote>
-                <div className="mt-4 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand">
-                  <span>Community Care Housing Foundation</span>
-                </div>
-              </div>
-            </Reveal>
-
             {/* 8-STEP INTERACTIVE ROADMAP */}
             <div className="mt-16">
               <RoadmapStepper />
