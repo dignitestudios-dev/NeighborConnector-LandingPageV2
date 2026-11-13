@@ -24,14 +24,18 @@ export function Features() {
             <p className="mt-3 max-w-lg leading-relaxed text-ink-soft">
               Create or join verified micro-circles where trusted neighbors, friends, and family can communicate, share updates, ask for help, and plan activities. You approve every request to join.
             </p>
-            <img
-              src="/assets/how-it-works.png"
-              alt="NeighborConnector circle home screen beside a neighborhood help request post"
-              width={1412}
-              height={1591}
-              loading="lazy"
-              className="mt-8 w-full max-w-lg transition-transform duration-500 group-hover:-translate-y-2"
-            />
+            <picture>
+              <source srcSet="/assets/how-it-works.webp" type="image/webp" />
+              <img
+                src="/assets/how-it-works.png"
+                alt="NeighborConnector circle home screen beside a neighborhood help request post"
+                width={1412}
+                height={1591}
+                loading="lazy"
+                decoding="async"
+                className="mt-8 w-full max-w-lg transition-transform duration-500 group-hover:-translate-y-2"
+              />
+            </picture>
           </Reveal>
 
           {/* Right Column: Check-in and Messages */}
@@ -48,14 +52,18 @@ export function Features() {
                 Mark yourself “Safe” each day so your circle knows how you’re doing. Completely optional — and always call 911 in a real emergency.
               </p>
               <div className="mt-6 flex items-center gap-4">
-                <img
-                  src="/assets/about.png"
-                  alt="NeighborConnector daily check-in screen showing a member marked as safe"
-                  width={716}
-                  height={759}
-                  loading="lazy"
-                  className="w-32 shrink-0 transition-transform duration-500 group-hover:-translate-y-2 sm:w-40"
-                />
+                <picture>
+                  <source srcSet="/assets/about.webp" type="image/webp" />
+                  <img
+                    src="/assets/about.png"
+                    alt="NeighborConnector daily check-in screen showing a member marked as safe"
+                    width={716}
+                    height={759}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-32 shrink-0 transition-transform duration-500 group-hover:-translate-y-2 sm:w-40"
+                  />
+                </picture>
                 <p className="text-base font-semibold text-brand">
                   Peace of mind, one check-in at a time.
                 </p>
