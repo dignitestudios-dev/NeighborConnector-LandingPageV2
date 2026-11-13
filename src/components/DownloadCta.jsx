@@ -29,11 +29,18 @@ export function DownloadCta() {
                   rel="noreferrer"
                   className="transition-transform duration-300 hover:-translate-y-0.5"
                 >
-                  <img
-                    src="/assets/apple.png"
-                    alt="Download NeighborConnector on the App Store"
-                    className="h-12 w-auto"
-                  />
+                  <picture>
+                    <source srcSet="/assets/apple.webp" type="image/webp" />
+                    <img
+                      src="/assets/apple.png"
+                      alt="Download NeighborConnector on the App Store"
+                      width={360}
+                      height={120}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-12 w-auto"
+                    />
+                  </picture>
                 </a>
                 <a
                   href="https://play.google.com/store/apps/details?id=com.cts.neighbour_connector"
@@ -41,19 +48,33 @@ export function DownloadCta() {
                   rel="noreferrer"
                   className="transition-transform duration-300 hover:-translate-y-0.5"
                 >
-                  <img
-                    src="/assets/google.png"
-                    alt="Get NeighborConnector on Google Play"
-                    className="h-12 w-auto"
-                  />
+                  <picture>
+                    <source srcSet="/assets/google.webp" type="image/webp" />
+                    <img
+                      src="/assets/google.png"
+                      alt="Get NeighborConnector on Google Play"
+                      width={360}
+                      height={120}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-12 w-auto"
+                    />
+                  </picture>
                 </a>
 
                 <div className="flex items-center gap-3.5 rounded-2xl bg-white/10 p-3 pr-5 border border-white/15 backdrop-blur-md shadow-soft">
-                  <img
-                    src="/assets/qrcode.png"
-                    alt="QR code linking to the NeighborConnector app download"
-                    className="size-20 sm:size-24 rounded-xl bg-white p-1.5 shadow-soft"
-                  />
+                  <picture>
+                    <source srcSet="/assets/qrcode.webp" type="image/webp" />
+                    <img
+                      src="/assets/qrcode.png"
+                      alt="QR code linking to the NeighborConnector app download"
+                      width={160}
+                      height={160}
+                      loading="lazy"
+                      decoding="async"
+                      className="size-20 sm:size-24 rounded-xl bg-white p-1.5 shadow-soft"
+                    />
+                  </picture>
                   <div className="text-xs sm:text-sm leading-tight text-white">
                     <p className="font-extrabold tracking-wide">Scan with phone</p>
                     <p className="text-xs text-white/80 mt-1">Instant App Download</p>
@@ -67,12 +88,18 @@ export function DownloadCta() {
               </p>
             </div>
 
-            <img
-              src="/assets/hero.png"
-              alt="NeighborConnector app shown on two phones"
-              loading="lazy"
-              className="animate-float-slow mx-auto w-full max-w-sm drop-shadow-[0_30px_60px_rgba(0,0,0,0.28)]"
-            />
+            <picture className="mx-auto w-full max-w-sm">
+              <source srcSet="/assets/hero.webp" type="image/webp" />
+              <img
+                src="/assets/hero.png"
+                alt="NeighborConnector app shown on two phones"
+                width={656}
+                height={704}
+                loading="lazy"
+                decoding="async"
+                className="animate-float-slow mx-auto w-full max-w-sm drop-shadow-[0_30px_60px_rgba(0,0,0,0.28)]"
+              />
+            </picture>
           </div>
         </Reveal>
       </div>

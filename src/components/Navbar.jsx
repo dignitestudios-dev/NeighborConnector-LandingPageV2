@@ -200,13 +200,18 @@ export function Navbar() {
       >
         {/* Logo / Brand - Bigger logo */}
         <Link href="/" className="flex min-w-0 items-center">
-          <img
-            src="/assets/logo-trim.png"
-            alt="NeighborConnector logo"
-            width="2838"
-            height="1688"
-            className="h-11 w-auto sm:h-12 md:h-14 transition-all"
-          />
+          <picture>
+            <source srcSet="/assets/logo-trim.webp" type="image/webp" />
+            <img
+              src="/assets/logo-trim.png"
+              alt="NeighborConnector logo"
+              width="2838"
+              height="1688"
+              fetchPriority="high"
+              decoding="async"
+              className="h-11 w-auto sm:h-12 md:h-14 transition-all"
+            />
+          </picture>
           <span className="sr-only">NeighborConnector home</span>
         </Link>
 

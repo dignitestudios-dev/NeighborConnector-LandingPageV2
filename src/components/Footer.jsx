@@ -8,11 +8,18 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Link href="/">
-              <img
-                src="/assets/logo-trim.png"
-                alt="NeighborConnector"
-                className="h-10 w-auto"
-              />
+              <picture>
+                <source srcSet="/assets/logo-trim.webp" type="image/webp" />
+                <img
+                  src="/assets/logo-trim.png"
+                  alt="NeighborConnector"
+                  loading="lazy"
+                  decoding="async"
+                  width="2838"
+                  height="1688"
+                  className="h-10 w-auto"
+                />
+              </picture>
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-ink-soft">
               NeighborConnector™ is a free app by Community Care Housing Foundation, a nonprofit dedicated to affordable housing and stronger, more supportive communities.

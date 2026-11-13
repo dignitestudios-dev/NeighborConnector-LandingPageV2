@@ -107,14 +107,18 @@ export function HowItWorks() {
                 aria-hidden="true"
                 className="absolute inset-x-4 top-8 bottom-8 -z-10 rounded-[3rem] bg-gradient-to-br from-mist via-white to-sprout"
               />
-              <img
-                src="/assets/features.png"
-                alt="NeighborConnector app home screen with circle updates and check-in button"
-                width={1388}
-                height={1595}
-                loading="lazy"
-                className="w-full drop-shadow-[0_30px_50px_rgba(7,81,155,0.16)]"
-              />
+              <picture>
+                <source srcSet="/assets/features.webp" type="image/webp" />
+                <img
+                  src="/assets/features.png"
+                  alt="NeighborConnector app home screen with circle updates and check-in button"
+                  width={1388}
+                  height={1595}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full drop-shadow-[0_30px_50px_rgba(7,81,155,0.16)]"
+                />
+              </picture>
               <div className="mt-6 flex items-center justify-center gap-2">
                 {STEPS.map((_, i) => (
                   <button

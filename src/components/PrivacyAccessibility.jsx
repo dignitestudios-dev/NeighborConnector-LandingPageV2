@@ -88,12 +88,18 @@ export function PrivacyAccessibility() {
           className="grid gap-6 lg:col-span-5"
         >
           <div className="surface-card overflow-hidden">
-            <img
-              src="/assets/photo-generations.jpg"
-              alt="Three generations of a family smiling together while looking at a phone"
-              loading="lazy"
-              className="h-52 w-full object-cover"
-            />
+            <picture>
+              <source srcSet="/assets/photo-generations.webp" type="image/webp" />
+              <img
+                src="/assets/photo-generations.jpg"
+                alt="Three generations of a family smiling together while looking at a phone"
+                width={1400}
+                height={933}
+                loading="lazy"
+                decoding="async"
+                className="h-52 w-full object-cover"
+              />
+            </picture>
             <div className="p-7">
               <span className="eyebrow">Accessibility</span>
               <h3 className="mt-4 text-2xl font-bold text-ink">

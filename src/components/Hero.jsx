@@ -72,13 +72,18 @@ export function Hero() {
             aria-hidden="true"
             className="absolute inset-x-6 top-10 bottom-10 -z-10 rounded-[3rem] bg-gradient-to-br from-mist via-white to-sprout"
           />
-          <img
-            src="/assets/hero.png"
-            alt="NeighborConnector app shown on three phone screens: welcome screen, community updates, and a neighborhood post"
-            width={656}
-            height={704}
-            className="relative w-full animate-float-slow drop-shadow-[0_40px_60px_rgba(7,81,155,0.18)]"
-          />
+          <picture>
+            <source srcSet="/assets/hero.webp" type="image/webp" />
+            <img
+              src="/assets/hero.png"
+              alt="NeighborConnector app shown on three phone screens: welcome screen, community updates, and a neighborhood post"
+              width={656}
+              height={704}
+              fetchPriority="high"
+              decoding="async"
+              className="relative w-full animate-float-slow drop-shadow-[0_40px_60px_rgba(7,81,155,0.18)]"
+            />
+          </picture>
 
           <div className="absolute -left-2 top-10 hidden animate-float-mid sm:block">
             <div className="surface-card flex items-center gap-3 px-4 py-3">
@@ -94,15 +99,19 @@ export function Hero() {
 
           <div className="absolute -right-2 bottom-8 hidden animate-float-slow sm:block">
             <div className="surface-card flex items-center gap-3 px-4 py-3">
-              <img
-                src="/assets/features.png"
-                alt=""
-                aria-hidden="true"
-                width={1388}
-                height={1595}
-                loading="lazy"
-                className="size-9 shrink-0 rounded-full object-cover object-top"
-              />
+              <picture>
+                <source srcSet="/assets/features.webp" type="image/webp" />
+                <img
+                  src="/assets/features.png"
+                  alt=""
+                  aria-hidden="true"
+                  width={1388}
+                  height={1595}
+                  loading="lazy"
+                  decoding="async"
+                  className="size-9 shrink-0 rounded-full object-cover object-top"
+                />
+              </picture>
               <div className="min-w-0">
                 <p className="text-sm font-semibold text-ink">Help request</p>
                 <p className="text-xs text-ink-soft">3 neighbors offered a hand</p>

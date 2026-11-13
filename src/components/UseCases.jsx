@@ -10,7 +10,8 @@ import { Reveal } from "./Reveal";
 
 const CARDS = [
   {
-    image: "/assets/photo-help.jpg",
+    image: "/assets/photo-help.png",
+    webpImage: "/assets/photo-help.webp",
     imageAlt:
       "A neighbor helping an older woman carry groceries up her driveway",
     icon: HandHeart,
@@ -33,6 +34,7 @@ const CARDS = [
   },
   {
     image: "/assets/photo-gathering.jpg",
+    webpImage: "/assets/photo-gathering.webp",
     imageAlt:
       "Neighbors of different ages sharing dinner at a long table under string lights",
     icon: CalendarDays,
@@ -76,12 +78,20 @@ export function UseCases() {
                 className="surface-card flex flex-col overflow-hidden transition-transform duration-300 hover:-translate-y-1"
               >
                 {card.image && (
-                  <img
-                    src={card.image}
-                    alt={card.imageAlt}
-                    loading="lazy"
-                    className="h-48 w-full object-cover"
-                  />
+                  <picture>
+                    {card.webpImage && (
+                      <source srcSet={card.webpImage} type="image/webp" />
+                    )}
+                    <img
+                      src={card.image}
+                      alt={card.imageAlt}
+                      width={800}
+                      height={533}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-48 w-full object-cover"
+                    />
+                  </picture>
                 )}
                 <div className="flex flex-1 flex-col p-7">
                   <span className="grid size-11 place-items-center rounded-2xl bg-sprout text-leaf-deep">

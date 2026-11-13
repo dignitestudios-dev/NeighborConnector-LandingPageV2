@@ -11,14 +11,18 @@ export function CommunityStory() {
                 aria-hidden="true"
                 className="absolute -inset-3 -z-10 rounded-[2.5rem] bg-gradient-to-br from-sprout via-white to-mist"
               />
-              <img
-                src="/assets/photo-neighbors.jpg"
-                alt="An older neighbor and a younger neighbor talking over a garden fence in the evening light"
-                width={1408}
-                height={1008}
-                loading="lazy"
-                className="w-full rounded-[2rem] object-cover shadow-lift"
-              />
+              <picture>
+                <source srcSet="/assets/photo-neighbors.webp" type="image/webp" />
+                <img
+                  src="/assets/photo-neighbors.jpg"
+                  alt="An older neighbor and a younger neighbor talking over a garden fence in the evening light"
+                  width={1408}
+                  height={1008}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full rounded-[2rem] object-cover shadow-lift"
+                />
+              </picture>
             </div>
           </Reveal>
         </div>
