@@ -1,13 +1,13 @@
 import Link from "next/link";
 import {
-  ArrowRight,
-  Award,
   Building2,
   Heart,
-  HeartHandshake,
-  ShieldCheck,
-  Sparkles,
   Users2,
+  ArrowRight,
+  HandHeart,
+  Tv,
+  Presentation,
+  Award,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Reveal } from "@/components/Reveal";
@@ -15,164 +15,150 @@ import { DownloadCta } from "@/components/DownloadCta";
 import { Footer } from "@/components/Footer";
 
 export const metadata = {
-  title: "Acknowledgements & Partners — Resources | NeighborConnector™",
+  title: "Acknowledgements — Resources | NeighborConnector™",
   description:
-    "Honoring the contributors, nonprofit partners, volunteers, and community champions who make NeighborConnector™ possible.",
+    "Honoring our sponsors, donors, advertisers, and community connection ambassadors.",
 };
-
-const ACKNOWLEDGEMENTS = [
-  {
-    category: "Nonprofit Leadership",
-    name: "Community Care Housing Foundation",
-    role: "Founding Nonprofit Sponsor",
-    description:
-      "Dedicated to affordable housing and stronger, more supportive communities. Community Care Housing Foundation funds and supports NeighborConnector™ as a 100% free community service.",
-    icon: Building2,
-    badge: "Founding Sponsor",
-  },
-  {
-    category: "Community Champions",
-    name: "Neighborhood Circle Leaders & Pilot Testers",
-    role: "Early Adopters & Advisory Group",
-    description:
-      "Our heartfelt thanks to the dozens of pilot circles, block coordinators, HOA champions, and faith community leaders who tested early prototypes and guided our feature roadmap.",
-    icon: Users2,
-    badge: "Community Advisory",
-  },
-  {
-    category: "Volunteer Caregivers",
-    name: "Local Family & Senior Care Volunteers",
-    role: "Mutual Aid Contributors",
-    description:
-      "Every neighbor who drives an elderly friend to a doctor appointment, checks in on a neighbor living alone, or shovels a snowy sidewalk embodies the true spirit of Circle Living™.",
-    icon: HeartHandshake,
-    badge: "Daily Heroes",
-  },
-  {
-    category: "Accessibility & Privacy Advocacy",
-    name: "Privacy & Inclusive Design Advisors",
-    role: "Technology & Ethics Counsel",
-    description:
-      "Guidance from accessibility advocates and privacy researchers who ensured our interface is large-print friendly, ad-free, and strictly protects member data.",
-    icon: ShieldCheck,
-    badge: "Trust & Ethics",
-  },
-];
 
 export default function AcknowledgementsPage() {
   return (
-    <div className="min-h-screen bg-white text-ink antialiased selection:bg-sprout selection:text-brand">
+    <div className="min-h-screen bg-[#FBFBF9] text-[#1D2A29] antialiased">
       <Navbar />
 
-      <main className="pt-24 md:pt-28">
-        <section className="relative overflow-hidden py-12 md:py-20">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(55%_45%_at_50%_0%,var(--color-sprout)_0%,transparent_65%)]"
-          />
-
-          <div className="container-page">
-            <div className="mx-auto max-w-3xl text-center">
-              <Reveal delay={0}>
-                <span className="eyebrow">
-                  <Award className="size-3.5" aria-hidden="true" />
-                  Gratitude &amp; Partnership
-                </span>
-
-                <h1 className="mt-5 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl lg:text-[3.25rem] lg:leading-[1.1]">
-                  Acknowledgements &amp; <span className="text-gradient-brand">Community Gratitude</span>
-                </h1>
-
-                <p className="mt-4 text-lg sm:text-xl text-ink-soft leading-relaxed">
-                  NeighborConnector™ is made possible through the generosity of nonprofit partners, volunteers, local community organizers, and caring neighbors everywhere.
-                </p>
-              </Reveal>
+      <main className="pt-28 pb-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center mb-12">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#285A48]/10 text-[#285A48] border border-[#285A48]/20 tracking-wide uppercase">
+                <Heart className="w-3.5 h-3.5 fill-[#285A48]" />
+                Gratitude &amp; Recognition
+              </span>
+              <h1 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1D2A29] tracking-tight">
+                Acknowledgements
+              </h1>
+              <p className="mt-4 text-lg text-[#4A5D5A] max-w-2xl mx-auto">
+                Celebrating the community supporters, generous donors, sponsors, and grassroots ambassadors who make NeighborConnector™ possible.
+              </p>
             </div>
+          </Reveal>
 
-            {/* Acknowledgement Cards Grid */}
-            <div className="mt-14 grid gap-8 md:grid-cols-2">
-              {ACKNOWLEDGEMENTS.map((item, idx) => {
-                const Icon = item.icon;
-                return (
-                  <Reveal key={item.name} delay={idx * 80}>
-                    <div className="surface-card p-6 sm:p-9 border border-hairline bg-white shadow-soft rounded-3xl h-full flex flex-col justify-between">
-                      <div>
-                        <div className="flex items-center justify-between">
-                          <span className="grid size-12 place-items-center rounded-2xl bg-sprout text-leaf-deep shadow-2xs">
-                            <Icon className="size-6" />
-                          </span>
-                          <span className="rounded-full bg-cream border border-hairline px-3 py-1 text-xs font-bold text-brand">
-                            {item.badge}
-                          </span>
-                        </div>
+          {/* 4 Placeholder Sections: Sponsors, Donors, Advertisers, Community Connection Ambassadors */}
+          <div className="space-y-8 mb-14">
+            {/* Section 1: Sponsors */}
+            <Reveal delay={50}>
+              <div className="bg-white rounded-3xl p-7 sm:p-8 border border-[#285A48]/15 shadow-sm">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="grid size-10 place-items-center rounded-xl bg-[#EBF3EF] text-[#285A48]">
+                    <Building2 className="w-5 h-5" />
+                  </span>
+                  <div>
+                    <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#1D2A29]">
+                      Sponsors
+                    </h2>
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#D97736]">
+                      Sponsorship Registry Coming Soon
+                    </span>
+                  </div>
+                </div>
+                <p className="text-sm text-[#4A5D5A] leading-relaxed">
+                  We are grateful to our foundational community partners and organizational sponsors who fund the technology, safety infrastructure, and ongoing operations of NeighborConnector™.
+                </p>
+              </div>
+            </Reveal>
 
-                        <span className="mt-6 block text-xs font-bold uppercase tracking-wider text-brand">
-                          {item.category}
-                        </span>
+            {/* Section 2: Donors */}
+            <Reveal delay={100}>
+              <div className="bg-white rounded-3xl p-7 sm:p-8 border border-[#285A48]/15 shadow-sm">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="grid size-10 place-items-center rounded-xl bg-[#EBF3EF] text-[#285A48]">
+                    <HandHeart className="w-5 h-5" />
+                  </span>
+                  <div>
+                    <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#1D2A29]">
+                      Donors
+                    </h2>
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#D97736]">
+                      Donor Recognition List Coming Soon
+                    </span>
+                  </div>
+                </div>
+                <p className="text-sm text-[#4A5D5A] leading-relaxed">
+                  A sincere thank you to individual donors and philanthropic supporters whose charitable gifts ensure NeighborConnector™ remains free for neighbors, seniors, and families everywhere.
+                </p>
+              </div>
+            </Reveal>
 
-                        <h2 className="mt-1 text-xl sm:text-2xl font-bold text-ink">
-                          {item.name}
-                        </h2>
+            {/* Section 3: Advertisers */}
+            <Reveal delay={150}>
+              <div className="bg-white rounded-3xl p-7 sm:p-8 border border-[#285A48]/15 shadow-sm">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="grid size-10 place-items-center rounded-xl bg-[#EBF3EF] text-[#285A48]">
+                    <Tv className="w-5 h-5" />
+                  </span>
+                  <div>
+                    <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#1D2A29]">
+                      Advertisers
+                    </h2>
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#D97736]">
+                      Community Partner Directory Coming Soon
+                    </span>
+                  </div>
+                </div>
+                <p className="text-sm text-[#4A5D5A] leading-relaxed">
+                  Recognizing trusted community businesses and local service providers collaborating with our mutual support ecosystem.
+                </p>
+              </div>
+            </Reveal>
 
-                        <p className="text-xs font-semibold text-leaf-deep mt-0.5">
-                          {item.role}
-                        </p>
+            {/* Section 4: Community Connection Ambassadors */}
+            <Reveal delay={200}>
+              <div className="bg-white rounded-3xl p-7 sm:p-8 border border-[#285A48]/15 shadow-sm">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="grid size-10 place-items-center rounded-xl bg-[#EBF3EF] text-[#285A48]">
+                    <Users2 className="w-5 h-5" />
+                  </span>
+                  <div>
+                    <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#1D2A29]">
+                      Community Connection Ambassadors
+                    </h2>
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#D97736]">
+                      Ambassador Network Coming Soon
+                    </span>
+                  </div>
+                </div>
+                <p className="text-sm text-[#4A5D5A] leading-relaxed">
+                  Our grassroots leaders, neighborhood block captains, and volunteer advocates who introduce Circle Living™ to their local areas.
+                </p>
 
-                        <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-                          {item.description}
-                        </p>
-                      </div>
-
-                      <div className="mt-6 pt-4 border-t border-hairline flex items-center justify-between text-xs text-ink-soft">
-                        <span>Thank you for making circles stronger</span>
-                        <Heart className="size-4 text-leaf-deep fill-sprout" />
-                      </div>
+                {/* Webinar / Presentation invitation callout */}
+                <div className="mt-5 p-4 rounded-2xl bg-[#EBF3EF] border border-[#285A48]/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div className="flex items-start gap-3">
+                    <Presentation className="w-5 h-5 text-[#285A48] shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-sm font-bold text-[#1D2A29]">
+                        Host a Webinar or Live Presentation for Your Group
+                      </p>
+                      <p className="text-xs text-[#4A5D5A] mt-0.5">
+                        Interested in bringing NeighborConnector™ to your HOA, church group, senior community, or civic association? We invite people to host webinars or live presentations for groups.
+                      </p>
                     </div>
-                  </Reveal>
-                );
-              })}
-            </div>
-
-            {/* Non-Profit Mission Card */}
-            <Reveal delay={120} className="mt-14">
-              <div className="rounded-3xl border border-hairline-leaf bg-gradient-to-br from-cream via-white to-sprout/40 p-8 sm:p-12 text-center max-w-4xl mx-auto shadow-soft">
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-sprout px-3 py-1 text-xs font-bold text-leaf-deep border border-hairline-leaf">
-                  <Sparkles className="size-3.5" />
-                  Our Ongoing Promise
-                </span>
-                <h3 className="mt-4 text-2xl sm:text-3xl font-extrabold text-ink">
-                  100% Free · Community Powered · No Ads
-                </h3>
-                <p className="mt-3 text-base text-ink-soft max-w-2xl mx-auto leading-relaxed">
-                  We believe essential human connection and neighborhood mutual aid should never be locked behind paywalls or exploited with advertisements. NeighborConnector™ will always remain a free gift to communities.
-                </p>
-                <div className="mt-8 flex flex-wrap justify-center gap-3">
-                  <a
-                    href="https://www.communitycarehousing.org"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-2.5 text-sm font-semibold text-white shadow-lift hover:bg-brand-bright transition-all"
+                  </div>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#285A48] text-white text-xs font-semibold hover:bg-[#1E4336] transition-colors shrink-0 self-start sm:self-center"
                   >
-                    <span>Visit Community Care Housing</span>
-                    <ArrowRight className="size-4" />
-                  </a>
-                  <a
-                    href="mailto:Info@CommunityCareHousing.org"
-                    className="inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-6 py-2.5 text-sm font-semibold text-ink-soft hover:bg-mist hover:text-brand transition-colors"
-                  >
-                    <span>Get in Touch</span>
-                  </a>
+                    <span>Request a Presentation</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
                 </div>
               </div>
             </Reveal>
           </div>
-        </section>
-
-        <DownloadCta />
+        </div>
       </main>
 
+      <DownloadCta />
       <Footer />
     </div>
   );
 }
-

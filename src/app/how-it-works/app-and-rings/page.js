@@ -153,10 +153,10 @@ const WHY_IT_MATTERS_POINTS = [
 
 export default function ExploreThePossibilitiesPage() {
   return (
-    <div className="min-h-screen bg-white text-ink antialiased selection:bg-sprout selection:text-brand">
+    <div className="min-h-screen bg-white text-ink antialiased selection:bg-sprout selection:text-brand overflow-x-clip w-full">
       <Navbar />
 
-      <main className="pt-24 md:pt-28">
+      <main className="pt-24 md:pt-28 overflow-x-clip w-full">
         {/* ============================================================== */}
         {/* PART 1 – INTRO                                                 */}
         {/* ============================================================== */}
@@ -183,13 +183,14 @@ export default function ExploreThePossibilitiesPage() {
                 </p>
 
                 <div className="mt-8 flex flex-wrap justify-center gap-4">
-                  <Link
-                    href="/why-it-matters"
+                  <a
+                    href="/assets/what-who-why-guide.pdf"
+                    download="What-Who-Why-It-Matters-Guide.pdf"
                     className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white shadow-lift hover:bg-brand-bright transition-all hover:-translate-y-0.5"
                   >
                     <FileDown className="size-4" />
                     <span>Download the What, Who &amp; Why It Matters Guide (FREE)</span>
-                  </Link>
+                  </a>
                 </div>
               </Reveal>
             </div>
@@ -560,7 +561,7 @@ export default function ExploreThePossibilitiesPage() {
                   <Lightbulb className="size-5" />
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-ink">
-                  What, Who &amp; Why It Matters Guide
+                  Why It Matters?
                 </h2>
               </div>
               <p className="mt-3 text-base text-ink-soft max-w-2xl">

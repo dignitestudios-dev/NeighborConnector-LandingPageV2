@@ -25,19 +25,16 @@ const HANDOUTS = [
     description:
       "A complete foundational overview explaining what NeighborConnector is, who it serves, and the 5 key reasons why private micro-circles matter.",
     pages: "Interactive & Printable Guide",
-    format: "PDF / Print",
-    primaryAction: {
-      label: "Download Guide (FREE)",
-      href: "/why-it-matters",
-      isPrint: false,
-    },
+    format: "PDF Document",
+    downloadUrl: "/assets/what-who-why-guide.pdf",
+    downloadFilename: "What-Who-Why-It-Matters-Guide.pdf",
+    primaryActionLabel: "Download Guide (FREE)",
     viewAction: {
       label: "View Guide Online",
       href: "/why-it-matters",
     },
     icon: FileText,
     accent: "sprout",
-    accentColor: "text-leaf-deep",
   },
   {
     title: "Circle Living™ Companion Worksheet",
@@ -45,19 +42,33 @@ const HANDOUTS = [
     description:
       "A fillable and printable tool to name your circle, map out members, choose daily check-in preferences, and assign support tasks.",
     pages: "Printable Template & Worksheet",
-    format: "PDF / Printable Sheet",
-    primaryAction: {
-      label: "Download Worksheet (FREE)",
-      href: "/companion-worksheet",
-      isPrint: false,
-    },
+    format: "PDF Document",
+    downloadUrl: "/assets/companion-worksheet.pdf",
+    downloadFilename: "Circle-Living-Companion-Worksheet.pdf",
+    primaryActionLabel: "Download Worksheet (FREE)",
     viewAction: {
       label: "Open Interactive Worksheet",
       href: "/companion-worksheet",
     },
     icon: FileSpreadsheet,
     accent: "mist",
-    accentColor: "text-brand",
+  },
+  {
+    title: "Getting Started Guide",
+    badge: "FREE PDF Guide",
+    description:
+      "Step-by-step handbook covering app download, profile setup, creating or joining circles, how to post, screenshots, and roadmap milestones.",
+    pages: "Complete Onboarding Guide",
+    format: "PDF Document",
+    downloadUrl: "/assets/getting-started-guide.pdf",
+    downloadFilename: "NeighborConnector-Getting-Started-Guide.pdf",
+    primaryActionLabel: "Download Guide (PDF)",
+    viewAction: {
+      label: "View Getting Started Guide",
+      href: "/how-it-works/getting-started-guide",
+    },
+    icon: Rocket,
+    accent: "sprout",
   },
   {
     title: "8-Step Roadmap Quick Reference",
@@ -69,15 +80,13 @@ const HANDOUTS = [
     primaryAction: {
       label: "View 8-Step Roadmap",
       href: "/how-it-works/get-started",
-      isPrint: false,
     },
     viewAction: {
       label: "Interactive Stepper",
       href: "/how-it-works/get-started",
     },
     icon: FileDown,
-    accent: "sprout",
-    accentColor: "text-leaf-deep",
+    accent: "mist",
   },
 ];
 
@@ -154,13 +163,24 @@ export default function DownloadableHandoutsPage() {
                     </div>
 
                     <div className="mt-8 flex flex-col gap-2.5">
-                      <Link
-                        href={handout.primaryAction.href}
-                        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white shadow-lift hover:bg-brand-bright transition-all"
-                      >
-                        <FileDown className="size-4" />
-                        <span>{handout.primaryAction.label}</span>
-                      </Link>
+                      {handout.downloadUrl ? (
+                        <a
+                          href={handout.downloadUrl}
+                          download={handout.downloadFilename}
+                          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white shadow-lift hover:bg-brand-bright transition-all cursor-pointer"
+                        >
+                          <FileDown className="size-4" />
+                          <span>{handout.primaryActionLabel}</span>
+                        </a>
+                      ) : (
+                        <Link
+                          href={handout.primaryAction.href}
+                          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white shadow-lift hover:bg-brand-bright transition-all"
+                        >
+                          <FileDown className="size-4" />
+                          <span>{handout.primaryAction.label}</span>
+                        </Link>
+                      )}
 
                       <Link
                         href={handout.viewAction.href}

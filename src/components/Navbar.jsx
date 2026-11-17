@@ -31,43 +31,27 @@ const WHY_DROPDOWN = [
     description: "Combines How NC Can Help, Who Comes to Mind, What It Can Do & Why It Matters",
     href: "/how-it-works/core-features",
     icon: Compass,
-    subLink: {
-      title: "What, Who & Why it Matters Guide",
-      href: "/why-it-matters",
-      icon: FileText,
-    },
   },
   {
     title: "Circle Living™",
     description: "Small, private circles of 2–10 trusted people you know",
     href: "/how-it-works/circle-living",
     icon: HeartHandshake,
-    subLink: {
-      title: "Companion Worksheet",
-      href: "/companion-worksheet",
-      icon: FileSpreadsheet,
-    },
   },
 ];
 
 const HOW_IT_WORKS_DROPDOWN = [
   {
-    title: "Your Circle(s) are Waiting",
-    description: "Small circles, real relationships & mutual support",
-    href: "/how-it-works/circle-living",
-    icon: HeartHandshake,
+    title: "Getting Started Guide",
+    description: "Downloading the app, setting up your circle & how to post",
+    href: "/how-it-works/getting-started-guide",
+    icon: Rocket,
   },
   {
     title: "8-Step Roadmap",
     description: "Putting NeighborConnector to work step by step",
     href: "/how-it-works/get-started",
-    icon: Rocket,
-  },
-  {
-    title: "Features",
-    description: "Everything you need to stay connected and coordinate",
-    href: "/#features",
-    icon: LayoutGrid,
+    icon: HeartHandshake,
   },
 ];
 
@@ -209,7 +193,7 @@ export function Navbar() {
               height="1688"
               fetchPriority="high"
               decoding="async"
-              className="h-11 w-auto sm:h-12 md:h-14 transition-all"
+              className="h-11 w-auto sm:h-12 md:h-18 transition-all"
             />
           </picture>
           <span className="sr-only">NeighborConnector home</span>
@@ -281,7 +265,6 @@ export function Navbar() {
                   <div className="space-y-2">
                     {WHY_DROPDOWN.map((item) => {
                       const Icon = item.icon;
-                      const SubIcon = item.subLink.icon;
                       return (
                         <div
                           key={item.title}
@@ -305,19 +288,6 @@ export function Navbar() {
                               </p>
                             </div>
                           </Link>
-
-                          {/* Embedded direct sublink to Guide / Companion Worksheet */}
-                          <div className="mt-2 pt-2 border-t border-hairline/70 pl-12">
-                            <Link
-                              href={item.subLink.href}
-                              onClick={() => setWhyDropdownOpen(false)}
-                              className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand hover:text-brand-bright hover:underline group/sub"
-                            >
-                              <SubIcon className="size-3 text-leaf-deep shrink-0" />
-                              <span>{item.subLink.title}</span>
-                              <span className="text-[10px] text-leaf-deep ml-0.5">→</span>
-                            </Link>
-                          </div>
                         </div>
                       );
                     })}
@@ -492,12 +462,12 @@ export function Navbar() {
 
             {/* 6. Contact */}
             <li>
-              <a
-                href="mailto:Info@CommunityCareHousing.org"
+              <Link
+                href="/contact"
                 className="rounded-full px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-mist hover:text-brand"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
 
@@ -573,7 +543,6 @@ export function Navbar() {
               <div className="mt-2 space-y-2 pt-2 border-t border-hairline">
                 {WHY_DROPDOWN.map((item) => {
                   const Icon = item.icon;
-                  const SubIcon = item.subLink.icon;
                   return (
                     <div key={item.title} className="rounded-xl bg-white p-2.5 border border-hairline">
                       <Link
@@ -589,18 +558,6 @@ export function Navbar() {
                           <p className="text-xs text-ink-soft mt-0.5">{item.description}</p>
                         </div>
                       </Link>
-
-                      <div className="mt-2 pt-2 border-t border-hairline pl-9">
-                        <Link
-                          href={item.subLink.href}
-                          onClick={() => setMobileOpen(false)}
-                          className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand"
-                        >
-                          <SubIcon className="size-3 text-leaf-deep" />
-                          <span>{item.subLink.title}</span>
-                          <span className="text-[10px]">→</span>
-                        </Link>
-                      </div>
                     </div>
                   );
                 })}
@@ -713,13 +670,13 @@ export function Navbar() {
 
           {/* Mobile Contact */}
           <li>
-            <a
-              href="mailto:Info@CommunityCareHousing.org"
+            <Link
+              href="/contact"
               onClick={() => setMobileOpen(false)}
               className="block rounded-2xl px-3 py-2 text-base font-medium text-ink transition-colors hover:bg-mist"
             >
               Contact
-            </a>
+            </Link>
           </li>
 
           {/* Mobile CTA */}

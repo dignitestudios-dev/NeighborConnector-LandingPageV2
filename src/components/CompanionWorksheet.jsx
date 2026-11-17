@@ -99,13 +99,20 @@ export function CompanionWorksheet() {
             </div>
 
             <div className="flex flex-wrap items-center gap-3 self-start sm:self-auto shrink-0 print:hidden">
-              <button
-                type="button"
-                onClick={handlePrint}
+              <a
+                href="/assets/companion-worksheet.pdf"
+                download="Circle-Living-Companion-Worksheet.pdf"
                 className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white shadow-lift hover:bg-brand-bright transition-all cursor-pointer"
               >
                 <Printer className="size-4" />
                 <span>Download the Companion Worksheet (FREE)</span>
+              </a>
+              <button
+                type="button"
+                onClick={handlePrint}
+                className="inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-4 py-2.5 text-sm font-medium text-ink hover:bg-mist/30 transition-all cursor-pointer"
+              >
+                Print / Save PDF
               </button>
             </div>
           </div>
@@ -181,8 +188,8 @@ export function CompanionWorksheet() {
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between sm:justify-end gap-3 sm:gap-4 pl-11 sm:pl-0">
-                    <span className="text-xs text-ink-soft bg-white px-2.5 py-1 rounded-full border border-hairline">
+                  <div className="flex flex-wrap items-center justify-between sm:justify-end gap-2 sm:gap-4 pl-11 sm:pl-0">
+                    <span className="text-xs text-ink-soft bg-white px-2.5 py-1 rounded-full border border-hairline max-w-full truncate">
                       {member.help}
                     </span>
                     <button

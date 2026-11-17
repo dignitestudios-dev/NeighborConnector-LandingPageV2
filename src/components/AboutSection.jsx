@@ -38,21 +38,44 @@ export function AboutSection() {
             <p className="mt-4 text-lg leading-relaxed text-ink-soft">
               This app is part of our mission to help people live more connected, supported lives — which is why it’s completely free, with no ads and no data selling.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3">
               <a
                 href="https://www.communitycarehousing.org"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold cursor-pointer transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed bg-brand text-primary-foreground shadow-lift hover:-translate-y-0.5 hover:bg-brand-bright h-12 px-7 text-[0.95rem]"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold cursor-pointer transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed bg-brand text-primary-foreground shadow-lift hover:-translate-y-0.5 hover:bg-brand-bright h-12 px-7 text-[0.95rem] text-center"
               >
-                Learn about our mission
+                Support Our Mission
               </a>
               <a
-                href="mailto:Info@CommunityCareHousing.org"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold cursor-pointer transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed border border-hairline bg-white text-brand shadow-soft hover:-translate-y-0.5 hover:border-brand-light h-12 px-7 text-[0.95rem]"
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold cursor-pointer transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed border border-hairline bg-white text-brand shadow-soft hover:-translate-y-0.5 hover:border-brand-light h-12 px-7 text-[0.95rem] text-center"
               >
                 Contact us
               </a>
+            </div>
+
+            {/* How to Help List */}
+            <div className="mt-10 rounded-2xl bg-white border border-hairline p-6 shadow-xs">
+              <h3 className="text-base font-bold text-ink mb-3">How You Can Help</h3>
+              <ul className="space-y-2.5 text-sm text-ink-soft">
+                <li className="flex items-start gap-2.5">
+                  <span className="grid size-5 place-items-center rounded-full bg-sprout text-leaf-deep font-bold text-xs shrink-0 mt-0.5">✓</span>
+                  <span><strong>Start a local circle:</strong> Invite 2–10 neighbors on your street, floor, or block.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="grid size-5 place-items-center rounded-full bg-sprout text-leaf-deep font-bold text-xs shrink-0 mt-0.5">✓</span>
+                  <span><strong>Look out for someone living alone:</strong> Add them to a daily reassurance morning check-in.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="grid size-5 place-items-center rounded-full bg-sprout text-leaf-deep font-bold text-xs shrink-0 mt-0.5">✓</span>
+                  <span><strong>Offer practical assistance:</strong> Lend a tool, shovel a walkway, or offer a ride to a medical appointment.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="grid size-5 place-items-center rounded-full bg-sprout text-leaf-deep font-bold text-xs shrink-0 mt-0.5">✓</span>
+                  <span><strong>Spread the word:</strong> Share NeighborConnector™ with your local HOA, church group, or community center.</span>
+                </li>
+              </ul>
             </div>
           </Reveal>
 

@@ -47,10 +47,10 @@ const WHY_IT_MATTERS = [
 
 export default function GetStartedPage() {
   return (
-    <div className="min-h-screen bg-white text-ink antialiased selection:bg-sprout selection:text-brand">
+    <div className="min-h-screen bg-white text-ink antialiased selection:bg-sprout selection:text-brand overflow-x-clip w-full">
       <Navbar />
 
-      <main className="pt-24 md:pt-28">
+      <main className="pt-24 md:pt-28 overflow-x-clip w-full">
 
         {/* Hero Section */}
         <section className="relative py-12 md:py-20">
