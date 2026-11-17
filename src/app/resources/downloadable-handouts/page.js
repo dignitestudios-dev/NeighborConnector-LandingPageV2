@@ -6,6 +6,7 @@ import {
   Printer,
   Sparkles,
   ExternalLink,
+  Rocket,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Reveal } from "@/components/Reveal";
