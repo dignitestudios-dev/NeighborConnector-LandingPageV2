@@ -135,9 +135,9 @@ export function CircleLiving() {
     <section className="relative overflow-hidden py-20 md:py-28">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(50%_40%_at_50%_0%,var(--color-sprout)_0%,transparent_65%)]"
+        className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-[radial-gradient(50%_40%_at_50%_0%,var(--color-sprout)_0%,transparent_65%)]"
       />
-      <div className="container-page">
+      <div className="container-page overflow-hidden">
         <Reveal delay={0} className="mx-auto max-w-2xl text-center">
           <span className="eyebrow">Circle Living™</span>
           <h2 className="mt-6 text-3xl font-extrabold text-ink sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">

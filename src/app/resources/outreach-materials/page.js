@@ -1,13 +1,12 @@
 import Link from "next/link";
 import {
   FileText,
-  HeartHandshake,
   Mail,
   Megaphone,
-  MessageSquare,
-  Printer,
-  Share2,
-  Sparkles,
+  Clock,
+  ArrowRight,
+  ShieldCheck,
+  Building,
   Users,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
@@ -16,167 +15,164 @@ import { DownloadCta } from "@/components/DownloadCta";
 import { Footer } from "@/components/Footer";
 
 export const metadata = {
-  title: "Outreach Materials & Templates — Resources | NeighborConnector™",
+  title: "Outreach Materials — Resources | NeighborConnector™",
   description:
-    "Templates, flyers, email scripts, and printable messages to help you invite neighbors and organize a private circle.",
+    "Official outreach materials, flyers, and templates for community leaders, neighborhoods, and organizations. Final versions coming soon.",
 };
-
-const TEMPLATES = [
-  {
-    category: "Flyers & Door Hangers",
-    title: "Neighborhood Introduction Flyer",
-    description:
-      "A friendly, clear 1-page printable flyer you can put in mailboxes or hand to neighbors to introduce the concept of private circles.",
-    badge: "Printable Flyer",
-    sampleText:
-      "“Hi Neighbor! A few of us on our street are using NeighborConnector™ — a free, private app with zero ads where we can check in, borrow tools, and coordinate rides. We'd love for you to join our circle!”",
-    ctaLabel: "Download Flyer Template (FREE)",
-    ctaHref: "/resources/downloadable-handouts",
-  },
-  {
-    category: "Email & Text Invites",
-    title: "Family & Close Friends Invite Script",
-    description:
-      "A warm text or email message you can copy and send to family members, adult children, or elderly parents.",
-    badge: "Copyable Script",
-    sampleText:
-      "“Hey! I set up a private circle on NeighborConnector™ for us. It lets us do quick morning check-ins so we know everyone is doing well, without cluttering group texts. It's totally private and free — here's our invite code!”",
-    ctaLabel: "Open Circle Living™ Guide",
-    ctaHref: "/how-it-works/circle-living",
-  },
-  {
-    category: "Community & HOA Outreach",
-    title: "Block Association & Church Group Notice",
-    description:
-      "Formal announcement text suitable for HOA newsletters, church bulletins, senior center boards, or community centers.",
-    badge: "Newsletter Blurb",
-    sampleText:
-      "“Community Care Housing Foundation has introduced NeighborConnector™ — a free, privacy-first mobile tool that helps residents form small micro-circles (2–10 people) for mutual support, snow removal, ride assistance, and daily peace of mind.”",
-    ctaLabel: "Learn About Our Mission",
-    ctaHref: "/#about",
-  },
-];
 
 export default function OutreachMaterialsPage() {
   return (
-    <div className="min-h-screen bg-white text-ink antialiased selection:bg-sprout selection:text-brand">
+    <div className="min-h-screen bg-[#FBFBF9] text-[#1D2A29] antialiased">
       <Navbar />
 
-      <main className="pt-24 md:pt-28">
-        <section className="relative overflow-hidden py-12 md:py-20">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(55%_45%_at_50%_0%,var(--color-sprout)_0%,transparent_65%)]"
-          />
-
-          <div className="container-page">
-            <div className="mx-auto max-w-3xl text-center">
-              <Reveal delay={0}>
-                <span className="eyebrow">
-                  <Megaphone className="size-3.5" aria-hidden="true" />
-                  Community Toolkits
-                </span>
-
-                <h1 className="mt-5 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl lg:text-[3.25rem] lg:leading-[1.1]">
-                  Community <span className="text-gradient-brand">Outreach Materials</span>
-                </h1>
-
-                <p className="mt-4 text-lg sm:text-xl text-ink-soft leading-relaxed">
-                  Ready-to-use invitation scripts, flyer copy, and neighborhood announcement blurbs to make starting your trusted circle easy and welcoming.
-                </p>
-              </Reveal>
+      <main className="pt-28 pb-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center mb-12">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#285A48]/10 text-[#285A48] border border-[#285A48]/20 tracking-wide uppercase">
+                <Megaphone className="w-3.5 h-3.5" />
+                Community Outreach
+              </span>
+              <h1 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1D2A29] tracking-tight">
+                Outreach Materials &amp; Templates
+              </h1>
+              <p className="mt-4 text-lg text-[#4A5D5A] max-w-2xl mx-auto">
+                Official flyers, email invitations, and announcement toolkits to help you introduce NeighborConnector™ to your neighbors, HOA, faith group, or civic organization.
+              </p>
             </div>
+          </Reveal>
 
-            {/* Template Cards */}
-            <div className="mt-14 space-y-8">
-              {TEMPLATES.map((tmpl, idx) => (
-                <Reveal key={tmpl.title} delay={idx * 70}>
-                  <div className="surface-card p-6 sm:p-9 border border-hairline bg-white shadow-soft rounded-3xl">
-                    <div className="flex flex-wrap items-center justify-between gap-3 border-b border-hairline pb-4">
-                      <div>
-                        <span className="text-xs font-bold uppercase tracking-wider text-brand">
-                          {tmpl.category}
-                        </span>
-                        <h2 className="mt-1 text-xl sm:text-2xl font-bold text-ink">
-                          {tmpl.title}
-                        </h2>
-                      </div>
-                      <span className="rounded-full bg-sprout px-3 py-1 text-xs font-bold text-leaf-deep border border-hairline-leaf">
-                        {tmpl.badge}
-                      </span>
-                    </div>
-
-                    <p className="mt-4 text-sm text-ink-soft leading-relaxed">
-                      {tmpl.description}
-                    </p>
-
-                    {/* Sample Message Box */}
-                    <div className="mt-5 rounded-2xl bg-cream/70 border border-hairline p-4 sm:p-5">
-                      <span className="text-xs font-bold uppercase tracking-wider text-ink-soft block mb-2">
-                        Suggested Wording:
-                      </span>
-                      <p className="text-sm italic text-ink leading-relaxed">
-                        {tmpl.sampleText}
-                      </p>
-                    </div>
-
-                    <div className="mt-6 flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-hairline">
-                      <span className="text-xs text-ink-soft">
-                        Free to customize and share in your local neighborhood.
-                      </span>
-                      <Link
-                        href={tmpl.ctaHref}
-                        className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2 text-xs font-semibold text-white shadow-lift hover:bg-brand-bright transition-all"
-                      >
-                        <span>{tmpl.ctaLabel}</span>
-                        <Share2 className="size-3" />
-                      </Link>
-                    </div>
+          {/* Placeholders for Upcoming Outreach Items */}
+          <div className="grid gap-6 sm:grid-cols-2 mb-12">
+            {/* 1. Neighborhood Introduction Flyer */}
+            <Reveal delay={50}>
+              <div className="bg-white rounded-3xl p-7 border border-[#285A48]/15 shadow-sm h-full flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="grid size-11 place-items-center rounded-2xl bg-[#EBF3EF] text-[#285A48]">
+                      <FileText className="w-5 h-5" />
+                    </span>
+                    <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#D97736]/15 text-[#D97736]">
+                      Flyer coming soon
+                    </span>
                   </div>
-                </Reveal>
-              ))}
-            </div>
-
-            {/* Tips Banner */}
-            <Reveal delay={120} className="mt-14">
-              <div className="rounded-3xl border border-hairline bg-gradient-to-r from-mist/80 via-white to-sprout/40 p-7 sm:p-10 shadow-soft">
-                <div className="flex items-center gap-3">
-                  <span className="grid size-10 place-items-center rounded-xl bg-brand text-white">
-                    <Users className="size-5" />
-                  </span>
-                  <div>
-                    <h3 className="text-xl font-bold text-ink">
-                      Best Practices for Inviting Neighbors
-                    </h3>
-                    <p className="text-sm text-ink-soft mt-0.5">
-                      Start small: 2 or 3 trusted neighbors are all you need to begin.
-                    </p>
-                  </div>
+                  <h3 className="font-serif text-xl font-bold text-[#1D2A29]">
+                    Neighborhood Introduction Flyer
+                  </h3>
+                  <p className="mt-2 text-sm text-[#4A5D5A] leading-relaxed">
+                    A friendly, printable 1-page door hanger and mailbox introduction explaining Circle Living™ and private pod safety.
+                  </p>
                 </div>
-                <div className="mt-6 grid gap-4 sm:grid-cols-3 text-xs leading-relaxed text-ink-soft">
-                  <div className="rounded-2xl bg-white p-4 border border-hairline">
-                    <strong className="text-ink block mb-1">1. Keep it Local</strong>
-                    Begin with the neighbor directly next door or across the hall who shares your driveway or entrance.
+                <div className="mt-6 pt-4 border-t border-[#285A48]/10 text-xs text-[#5C6E6B] italic">
+                  Printable PDF download will be enabled once design review completes.
+                </div>
+              </div>
+            </Reveal>
+
+            {/* 2. Family & Friends Invite Script */}
+            <Reveal delay={100}>
+              <div className="bg-white rounded-3xl p-7 border border-[#285A48]/15 shadow-sm h-full flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="grid size-11 place-items-center rounded-2xl bg-[#EBF3EF] text-[#285A48]">
+                      <Mail className="w-5 h-5" />
+                    </span>
+                    <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#D97736]/15 text-[#D97736]">
+                      Script coming soon
+                    </span>
                   </div>
-                  <div className="rounded-2xl bg-white p-4 border border-hairline">
-                    <strong className="text-ink block mb-1">2. Emphasize Privacy</strong>
-                    Reassure them that there are zero ads, zero public posts, and that only approved members can see the pod.
+                  <h3 className="font-serif text-xl font-bold text-[#1D2A29]">
+                    Family &amp; Close Friends Invite Script
+                  </h3>
+                  <p className="mt-2 text-sm text-[#4A5D5A] leading-relaxed">
+                    Copy-and-paste text messages and email copy to warmly invite elderly parents, adult children, or close friends.
+                  </p>
+                </div>
+                <div className="mt-6 pt-4 border-t border-[#285A48]/10 text-xs text-[#5C6E6B] italic">
+                  Pre-written invitation copy coming soon.
+                </div>
+              </div>
+            </Reveal>
+
+            {/* 3. Block Association & Church Group Notice */}
+            <Reveal delay={150}>
+              <div className="bg-white rounded-3xl p-7 border border-[#285A48]/15 shadow-sm h-full flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="grid size-11 place-items-center rounded-2xl bg-[#EBF3EF] text-[#285A48]">
+                      <Building className="w-5 h-5" />
+                    </span>
+                    <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#D97736]/15 text-[#D97736]">
+                      Notice template coming soon
+                    </span>
                   </div>
-                  <div className="rounded-2xl bg-white p-4 border border-hairline">
-                    <strong className="text-ink block mb-1">3. Start With Reassurance</strong>
-                    Point out the simple morning check-in feature as an effortless way to keep peace of mind.
+                  <h3 className="font-serif text-xl font-bold text-[#1D2A29]">
+                    Block Association &amp; Church Group Notice
+                  </h3>
+                  <p className="mt-2 text-sm text-[#4A5D5A] leading-relaxed">
+                    Formal blurbs formatted for HOA newsletters, bulletin inserts, community boards, and civic gatherings.
+                  </p>
+                </div>
+                <div className="mt-6 pt-4 border-t border-[#285A48]/10 text-xs text-[#5C6E6B] italic">
+                  Newsletter &amp; bulletin blurbs in development.
+                </div>
+              </div>
+            </Reveal>
+
+            {/* 4. Best Practices for Inviting Neighbors */}
+            <Reveal delay={200}>
+              <div className="bg-white rounded-3xl p-7 border border-[#285A48]/15 shadow-sm h-full flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="grid size-11 place-items-center rounded-2xl bg-[#EBF3EF] text-[#285A48]">
+                      <Users className="w-5 h-5" />
+                    </span>
+                    <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#D97736]/15 text-[#D97736]">
+                      Guide coming soon
+                    </span>
                   </div>
+                  <h3 className="font-serif text-xl font-bold text-[#1D2A29]">
+                    Best Practices for Inviting Neighbors
+                  </h3>
+                  <p className="mt-2 text-sm text-[#4A5D5A] leading-relaxed">
+                    Warm, thoughtful guidance on having low-pressure conversations with neighbors over the fence or on the sidewalk.
+                  </p>
+                </div>
+                <div className="mt-6 pt-4 border-t border-[#285A48]/10 text-xs text-[#5C6E6B] italic">
+                  Community organizer tips coming soon.
                 </div>
               </div>
             </Reveal>
           </div>
-        </section>
 
-        <DownloadCta />
+          {/* Quick Note on Early Copies */}
+          <Reveal delay={250}>
+            <div className="rounded-2xl bg-[#EBF3EF] border border-[#285A48]/15 p-6 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+              <div className="w-12 h-12 rounded-xl bg-white text-[#285A48] flex items-center justify-center shrink-0 shadow-xs">
+                <ShieldCheck className="w-6 h-6" />
+              </div>
+              <div className="flex-1">
+                <p className="text-sm font-semibold text-[#1D2A29]">
+                  Need personalized flyers for your HOA, neighborhood, or organization?
+                </p>
+                <p className="text-xs sm:text-sm text-[#4A5D5A] mt-0.5">
+                  Our team can provide custom co-branded print materials for your community pilot.
+                </p>
+              </div>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-[#285A48] text-white text-xs sm:text-sm font-semibold hover:bg-[#1E4336] transition-colors shrink-0"
+              >
+                <span>Request Early Copy</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </Reveal>
+        </div>
       </main>
 
+      <DownloadCta />
       <Footer />
     </div>
   );
 }
-

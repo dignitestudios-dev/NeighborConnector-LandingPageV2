@@ -22,7 +22,7 @@ export function Footer() {
               </picture>
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-ink-soft">
-              NeighborConnector™ is a free app by Community Care Housing Foundation, a nonprofit dedicated to affordable housing and stronger, more supportive communities.
+              NeighborConnector™ is a free app by Community Care Housing, a nonprofit dedicated to affordable housing and stronger, more supportive communities.
             </p>
           </div>
 
@@ -83,14 +83,14 @@ export function Footer() {
                   Explore the Possibilities
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/why-it-matters"
                   className="text-sm text-ink-soft transition-colors hover:text-brand"
                 >
                   What, Who &amp; Why It Matters
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/how-it-works/circle-living"
@@ -99,28 +99,37 @@ export function Footer() {
                   Circle Living™
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/companion-worksheet"
                   className="text-sm text-ink-soft transition-colors hover:text-brand"
                 >
                   Companion Worksheet
                 </Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link
                   href="/how-it-works/get-started"
                   className="text-sm text-ink-soft transition-colors hover:text-brand"
                 >
                   8-Step Roadmap
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
 
           <div>
             <h2 className="text-sm font-semibold text-ink">Get in touch</h2>
             <ul className="mt-4 space-y-3">
+              <li>
+                <Link
+                  href="/contact"
+                  className="flex items-center gap-2 text-sm text-ink-soft transition-colors hover:text-brand font-medium"
+                >
+                  <Mail className="size-4 shrink-0" aria-hidden="true" />
+                  <span>Contact Form &amp; Support</span>
+                </Link>
+              </li>
               <li>
                 <a
                   href="mailto:Info@CommunityCareHousing.org"
@@ -155,7 +164,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-hairline pt-7 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-ink-soft">
-            © 2026 Community Care Housing Foundation. All rights reserved.
+            © 2026 Community Care Housing. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-5">
             <a
@@ -166,13 +175,25 @@ export function Footer() {
             >
               Privacy Policy
             </a>
+            <Link
+              href="/legal-disclaimer"
+              className="text-xs text-ink-soft transition-colors hover:text-brand"
+            >
+              Legal Disclaimer
+            </Link>
+            <Link
+              href="/child-safety-policy"
+              className="text-xs text-ink-soft transition-colors hover:text-brand"
+            >
+              Child Safety Policy
+            </Link>
             <a
               href="https://www.neighborconnector.org/terms-of-service"
               target="_blank"
               rel="noreferrer"
               className="text-xs text-ink-soft transition-colors hover:text-brand"
             >
-              Terms of Service
+              Terms &amp; Conditions
             </a>
           </div>
         </div>

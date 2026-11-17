@@ -29,15 +29,15 @@ export function CommunityStory() {
 
         <div className="order-1 lg:order-2">
           <Reveal delay={0}>
-            <span className="eyebrow">Why we exist</span>
+            <span className="eyebrow">Our Why</span>
             <h2 className="mt-6 text-3xl font-extrabold text-ink sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
               Community Starts With Connection
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-ink-soft">
-              We have never had more ways to communicate. Yet neighbors, friend, and family often remain unaware of the support waiting a few doors away. Loneliness and isolation have become a serious health concern, especially for older adults and neighbors who could use a hand.
+              We have never had more ways to communicate. Yet neighbors, friends, and family often remain unaware of the support waiting a few doors away. Loneliness and isolation have become serious health concerns, especially for older adults and anyone navigating daily challenges.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-ink-soft">
-              NeighborConnector™ takes a quieter path: a handful of people you already know, in one private circle, close enough to actually show up for each other. Users may belong to more than one circle for various needs.
+              NeighborConnector™ takes a quieter, more personal path: a handful of people you already know and trust, gathered into a private micro-circle, close enough to truly show up for each other.
             </p>
           </Reveal>
 
