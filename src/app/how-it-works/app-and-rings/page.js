@@ -600,7 +600,7 @@ export default function ExploreThePossibilitiesPage() {
                   “You may already have meaningful relationships. NeighborConnector™ gives you a shared place to coordinate everyday life, help one another, communicate, and stay further connected. Make a difference together.”
                 </blockquote>
                 <div className="mt-4 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand">
-                  <span>Community Care Housing Foundation</span>
+                  <span>Community Care Housing</span>
                 </div>
               </div>
             </Reveal>

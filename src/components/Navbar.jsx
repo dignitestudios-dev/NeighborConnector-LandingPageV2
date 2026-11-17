@@ -193,7 +193,7 @@ export function Navbar() {
               height="1688"
               fetchPriority="high"
               decoding="async"
-              className="h-11 w-auto sm:h-12 md:h-18 transition-all"
+              className="h-11 w-auto sm:h-16 md:h-18 transition-all"
             />
           </picture>
           <span className="sr-only">NeighborConnector home</span>
