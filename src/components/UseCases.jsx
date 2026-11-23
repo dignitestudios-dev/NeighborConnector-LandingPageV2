@@ -10,7 +10,7 @@ import { Reveal } from "./Reveal";
 
 const CARDS = [
   {
-    image: "/assets/photo-help.png",
+    image: "/assets/photo-help.jpg",
     webpImage: "/assets/photo-help.webp",
     imageAlt:
       "A neighbor helping an older woman carry groceries up her driveway",
@@ -21,12 +21,18 @@ const CARDS = [
     delay: 0,
   },
   {
+    image: "/assets/photo-walk.jpg",
+    imageAlt:
+      "Two friends walking outdoors together on a sunny neighborhood path",
     icon: Footprints,
     title: "Going for a Walk?",
     description: "Invite someone from your circle to join you.",
     delay: 70,
   },
   {
+    image: "/assets/photo-checkin.jpg",
+    imageAlt:
+      "A neighbor peacefully checking in on their phone from home",
     icon: ShieldCheck,
     title: "Checking In",
     description: "Let people know you're safe and doing well.",
@@ -44,12 +50,18 @@ const CARDS = [
     delay: 210,
   },
   {
+    image: "/assets/photo-ride.jpg",
+    imageAlt:
+      "A car ride being coordinated between trusted companions",
     icon: Car,
     title: "Need a Ride?",
     description: "Coordinate transportation with people you trust.",
     delay: 280,
   },
   {
+    image: "/assets/photo-hello.jpg",
+    imageAlt:
+      "Friends and neighbors laughing and greeting each other warmly",
     icon: Smile,
     title: "Just Saying Hello",
     description: "Sometimes connection doesn't need a reason.",
