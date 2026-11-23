@@ -31,7 +31,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft md:text-xl">
-            NeighborConnector™ helps you create small, trusted circles with neighbors, friends, and family so you can stay connected, support one another, and build meaningful relationships close to home.
+            NeighborConnector™ helps you create small, trusted circles with neighbors, friends and family to stay connected, share support and enjoy more meaningful relationships.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -39,7 +39,7 @@ export function Hero() {
               href="#download"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold cursor-pointer transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed bg-brand text-primary-foreground shadow-lift hover:-translate-y-0.5 hover:bg-brand-bright h-14 px-8 text-base"
             >
-              Get the App
+              Discover
               <ArrowRight className="size-4" aria-hidden="true" />
             </a>
 
@@ -47,14 +47,14 @@ export function Hero() {
               href="/how-it-works/circle-living"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold cursor-pointer transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed border border-hairline bg-white text-brand shadow-soft hover:-translate-y-0.5 hover:border-brand-light h-14 px-7 text-base"
             >
-              Circle Living™
+              Build
             </a>
 
             <a
               href="/how-it-works/get-started"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold cursor-pointer transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed border border-hairline bg-cream/70 text-ink-soft shadow-soft hover:-translate-y-0.5 hover:border-brand-light hover:text-brand h-14 px-7 text-base"
             >
-              How It Works
+              Connect
             </a>
           </div>
 
@@ -83,7 +83,7 @@ export function Hero() {
             <source srcSet="/assets/hero.webp" type="image/webp" />
             <img
               src="/assets/hero.png"
-              alt="NeighborConnector app shown on three phone screens: welcome screen, community updates, and a neighborhood post"
+              alt="NeighborConnector app shown on three phone screens: welcome screen, community updates and a neighborhood post"
               width={656}
               height={704}
               fetchPriority="high"

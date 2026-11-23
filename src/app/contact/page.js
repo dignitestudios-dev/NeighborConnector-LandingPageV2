@@ -1,19 +1,39 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
-import { Mail, Phone, MapPin, Send, CheckCircle2, MessageSquare } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle2, MessageSquare, ChevronDown, Check } from "lucide-react";
+
+const TOPIC_OPTIONS = [
+  "General Inquiry",
+  "Request a Live Presentation or Webinar for a neighborhood, HOA, senior community, church, nonprofit or other community group.",
+  "Become a Community Connector Ambassador",
+  "Be a Paid Advertiser or Provide Giveaways",
+  "Be a Sponsor",
+];
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "General Inquiry",
+    subject: TOPIC_OPTIONS[0],
     message: "",
   });
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -158,21 +178,58 @@ export default function ContactPage() {
                         />
                       </div>
 
-                      <div>
+                      <div ref={dropdownRef} className="relative">
                         <label className="block text-xs font-semibold uppercase tracking-wider text-[#1D2A29] mb-1.5">
                           Subject / Topic
                         </label>
-                        <select
-                          value={formData.subject}
-                          onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                          className="w-full rounded-xl border border-[#285A48]/20 bg-[#FBFBF9] px-4 py-3 text-sm text-[#1D2A29] focus:border-[#285A48] focus:outline-none focus:ring-2 focus:ring-[#285A48]/20"
+                        <button
+                          type="button"
+                          onClick={() => setIsDropdownOpen((prev) => !prev)}
+                          className="w-full flex items-center justify-between text-left rounded-xl border border-[#285A48]/20 bg-[#FBFBF9] px-4 py-3 text-sm text-[#1D2A29] hover:border-[#285A48]/40 focus:border-[#285A48] focus:outline-none focus:ring-2 focus:ring-[#285A48]/20 transition-all cursor-pointer shadow-xs gap-3"
+                          aria-haspopup="listbox"
+                          aria-expanded={isDropdownOpen}
                         >
-                          <option>General Inquiry</option>
-                          <option>Starting a Circle in My Neighborhood</option>
-                          <option>HOA / Faith Community Collaboration</option>
-                          <option>Media or Foundation Inquiry</option>
-                          <option>Feedback or Suggestion</option>
-                        </select>
+                          <span className="leading-snug break-words">
+                            {formData.subject}
+                          </span>
+                          <ChevronDown
+                            className={`size-4 text-[#285A48] shrink-0 transition-transform duration-200 ${
+                              isDropdownOpen ? "rotate-180" : ""
+                            }`}
+                            aria-hidden="true"
+                          />
+                        </button>
+
+                        {isDropdownOpen && (
+                          <div className="absolute z-30 mt-2 w-full rounded-2xl border border-[#285A48]/20 bg-white p-1.5 shadow-float animate-in fade-in zoom-in-95 duration-150">
+                            <ul role="listbox" className="space-y-1 max-h-80 overflow-y-auto">
+                              {TOPIC_OPTIONS.map((option) => {
+                                const isSelected = formData.subject === option;
+                                return (
+                                  <li
+                                    key={option}
+                                    role="option"
+                                    aria-selected={isSelected}
+                                    onClick={() => {
+                                      setFormData({ ...formData, subject: option });
+                                      setIsDropdownOpen(false);
+                                    }}
+                                    className={`flex items-start justify-between gap-3 px-3.5 py-2.5 rounded-xl text-sm cursor-pointer transition-colors leading-relaxed ${
+                                      isSelected
+                                        ? "bg-[#EBF3EF] text-[#285A48] font-semibold"
+                                        : "text-[#1D2A29] hover:bg-[#FBFBF9] hover:text-[#285A48]"
+                                    }`}
+                                  >
+                                    <span className="break-words">{option}</span>
+                                    {isSelected && (
+                                      <Check className="size-4 shrink-0 text-[#285A48] mt-0.5" />
+                                    )}
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          </div>
+                        )}
                       </div>
 
                       <div>

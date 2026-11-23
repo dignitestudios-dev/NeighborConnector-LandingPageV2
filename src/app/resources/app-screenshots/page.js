@@ -22,7 +22,7 @@ import { Footer } from "@/components/Footer";
 export const metadata = {
   title: "App Screenshots & Walkthrough — Resources | NeighborConnector™",
   description:
-    "Preview the NeighborConnector™ interface: private circle feed, daily reassurance check-ins, ride coordination, chores, and group chat.",
+    "Preview the NeighborConnector™ interface: private circle feed, daily reassurance check-ins, ride coordination, chores and group chat.",
 };
 
 const SCREENSHOT_FEATURES = [
@@ -30,7 +30,7 @@ const SCREENSHOT_FEATURES = [
     title: "Private Circle Home & Feed",
     badge: "Home Hub",
     description:
-      "A distraction-free central space showing only your verified circle members. No public posts, no algorithmic feeds, and no sponsor ads.",
+      "A distraction-free central space showing only your verified circle members. No public posts, no algorithmic feeds and no sponsor ads.",
     image: "/assets/how-it-works.png",
     caption: "Circle feed with daily updates and active neighbor requests",
     highlights: ["Verified members only", "Real-time updates", "Instant reassurance"],
@@ -80,7 +80,7 @@ export default function AppScreenshotsPage() {
                 </h1>
 
                 <p className="mt-4 text-lg sm:text-xl text-ink-soft leading-relaxed">
-                  Take a visual walk through NeighborConnector™. Clean, accessible, large-print friendly, and designed for genuine human connection.
+                  Take a visual walk through NeighborConnector™. Clean, accessible, large-print friendly and designed for genuine human connection.
                 </p>
               </Reveal>
             </div>

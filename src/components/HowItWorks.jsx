@@ -7,9 +7,9 @@ import { Reveal } from "./Reveal";
 const STEPS = [
   {
     n: "01",
-    title: "Create Your Profile",
+    title: "Download the App & Create Your Profile",
     description:
-      "Download the app and add your name, photo, and the details you're comfortable sharing. Emergency contacts are optional, and you can update anything later.",
+      "Download the free app and add your name, photo and the details you're comfortable sharing. Emergency contacts are optional and you can update anything later.",
   },
   {
     n: "02",
@@ -19,9 +19,9 @@ const STEPS = [
   },
   {
     n: "03",
-    title: "Start Connecting",
+    title: "Start Connecting – Use NeighborConnector™ in Everyday Life",
     description:
-      "Chat, check in, ask for help, share updates, plan a walk or a get-together, and build stronger relationships over time.",
+      "Chat, check in, ask for help, share updates, plan a walk or a get-together and build stronger relationships over time.",
   },
 ];
 
@@ -105,7 +105,7 @@ export function HowItWorks() {
             <div className="relative mx-auto max-w-sm">
               <div
                 aria-hidden="true"
-                className="absolute inset-x-4 top-8 bottom-8 -z-10 rounded-[3rem] bg-gradient-to-br from-mist via-white to-sprout"
+                className="absolute inset-x-4 top-8 bottom-8 -z-10 rounded-[3rem] b"
               />
               <picture>
                 <source srcSet="/assets/features.webp" type="image/webp" />
@@ -133,6 +133,10 @@ export function HowItWorks() {
                   />
                 ))}
               </div>
+
+              <p className="mt-6 text-center text-sm sm:text-base leading-relaxed text-ink-soft">
+                You don't have to wait until something important happens. Once you have at least one Circle, you can start connecting for everyday needs, plans and connection.
+              </p>
             </div>
           </div>
         </div>

@@ -21,14 +21,16 @@ export default function Home() {
       <main className="overflow-x-clip w-full">
         <Hero />
         <ValueProps />
+        
         <CommunityStory />
+            <UseCases />
         <HomeInteractiveExplorations />
         <Comparison />
+        <PrivacyAccessibility />
         <CircleLiving />
         <Features />
         <HowItWorks />
-        <UseCases />
-        <PrivacyAccessibility />
+    
         <AboutSection />
         <FaqSection />
         <DownloadCta />

@@ -44,28 +44,28 @@ const WHAT_NC_CAN_DO_PILLARS = [
   {
     icon: HandHeart,
     title: "Give & Receive Help",
-    description: "Practical chores, yard care, home repairs, and trusted tool lending.",
+    description: "Practical chores, yard care, home repairs and trusted tool lending.",
     bg: "bg-sprout",
     color: "text-leaf-deep",
   },
   {
     icon: CalendarDays,
     title: "Coordinate Life",
-    description: "Shared rides, doctor runs, calendar synchronization, and friendly check-ins.",
+    description: "Shared rides, doctor runs, calendar synchronization and friendly check-ins.",
     bg: "bg-mist",
     color: "text-brand",
   },
   {
     icon: PartyPopper,
     title: "Enjoy Life Together",
-    description: "Coffee walks, backyard potlucks, game nights, outings, and local hobbies.",
+    description: "Coffee walks, backyard potlucks, game nights, outings and local hobbies.",
     bg: "bg-sprout",
     color: "text-leaf-deep",
   },
   {
     icon: MessageCircle,
     title: "Stay Connected",
-    description: "Private micro-circle updates, safe group chats, and gentle reassurance pings.",
+    description: "Private micro-circle updates, safe group chats and gentle reassurance pings.",
     bg: "bg-mist",
     color: "text-brand",
   },
@@ -214,7 +214,7 @@ export default function ExploreThePossibilitiesPage() {
                 </h2>
 
                 <p className="mt-4 text-base sm:text-lg leading-relaxed text-ink-soft">
-                  NeighborConnector™ gives the people you know and trust a shared, private place to stay connected, help one another, make plans, and enjoy life together.
+                  NeighborConnector™ gives the people you know and trust a shared, private place to stay connected, help one another, make plans and enjoy life together.
                 </p>
               </Reveal>
             </div>
@@ -341,7 +341,7 @@ export default function ExploreThePossibilitiesPage() {
                     </h3>
                   </div>
                   <p className="mt-2 text-sm text-ink-soft">
-                    Practical tools built for real neighbors: morning check-ins, home help, and occasional favor requests.
+                    Practical tools built for real neighbors: morning check-ins, home help and occasional favor requests.
                   </p>
                 </Reveal>
 
@@ -382,7 +382,7 @@ export default function ExploreThePossibilitiesPage() {
                     </span>
                     <h4 className="mt-4 text-base font-bold text-ink">Occasional Favors</h4>
                     <p className="mt-2 text-xs text-ink-soft leading-relaxed">
-                      Mail checking, pet feeding, and plant watering while you are traveling or tied up.
+                      Mail checking, pet feeding and plant watering while you are traveling or tied up.
                     </p>
                     <div className="mt-3 grid grid-cols-2 gap-1.5">
                       {OCCASIONAL_HELP.slice(0, 2).map((item) => {
@@ -439,7 +439,7 @@ export default function ExploreThePossibilitiesPage() {
                     </span>
                     <h4 className="mt-4 text-base font-bold text-ink">Plan Events &amp; Social Joy</h4>
                     <p className="mt-2 text-xs text-ink-soft leading-relaxed">
-                      Afternoon walks, coffee dates, backyard potlucks, and shared hobby outings.
+                      Afternoon walks, coffee dates, backyard potlucks and shared hobby outings.
                     </p>
                     <div className="mt-3 flex flex-wrap gap-1">
                       {SOCIAL_TAGS.slice(0, 2).map((tag) => (
@@ -597,7 +597,7 @@ export default function ExploreThePossibilitiesPage() {
               <div className="relative overflow-hidden rounded-3xl border border-hairline-leaf bg-gradient-to-br from-cream via-white to-sprout/40 p-7 sm:p-10 shadow-soft">
                 <Quote className="size-10 text-leaf-deep/40 mb-3" />
                 <blockquote className="text-lg sm:text-xl font-medium text-ink italic leading-relaxed">
-                  “You may already have meaningful relationships. NeighborConnector™ gives you a shared place to coordinate everyday life, help one another, communicate, and stay further connected. Make a difference together.”
+                  “You may already have meaningful relationships. NeighborConnector™ gives you a shared place to coordinate everyday life, help one another, communicate and stay further connected. Make a difference together.”
                 </blockquote>
                 <div className="mt-4 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand">
                   <span>Community Care Housing</span>

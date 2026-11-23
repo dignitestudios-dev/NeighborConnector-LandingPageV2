@@ -17,7 +17,7 @@ import { Footer } from "@/components/Footer";
 export const metadata = {
   title: "Outreach Materials — Resources | NeighborConnector™",
   description:
-    "Official outreach materials, flyers, and templates for community leaders, neighborhoods, and organizations. Final versions coming soon.",
+    "Official outreach materials, flyers and templates for community leaders, neighborhoods and organizations. Final versions coming soon.",
 };
 
 export default function OutreachMaterialsPage() {
@@ -37,7 +37,7 @@ export default function OutreachMaterialsPage() {
                 Outreach Materials &amp; Templates
               </h1>
               <p className="mt-4 text-lg text-[#4A5D5A] max-w-2xl mx-auto">
-                Official flyers, email invitations, and announcement toolkits to help you introduce NeighborConnector™ to your neighbors, HOA, faith group, or civic organization.
+                Official flyers, email invitations and announcement toolkits to help you introduce NeighborConnector™ to your neighbors, HOA, faith group, or civic organization.
               </p>
             </div>
           </Reveal>
@@ -110,7 +110,7 @@ export default function OutreachMaterialsPage() {
                     Block Association &amp; Church Group Notice
                   </h3>
                   <p className="mt-2 text-sm text-[#4A5D5A] leading-relaxed">
-                    Formal blurbs formatted for HOA newsletters, bulletin inserts, community boards, and civic gatherings.
+                    Formal blurbs formatted for HOA newsletters, bulletin inserts, community boards and civic gatherings.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-[#285A48]/10 text-xs text-[#5C6E6B] italic">

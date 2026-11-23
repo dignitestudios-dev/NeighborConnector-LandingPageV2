@@ -33,8 +33,8 @@ const STEPS = [
   {
     step: "05",
     title: "Make a Plan",
-    description: "Set a time, date, and expectations with clear in-app updates and calendar sync.",
-    detail: "Avoid endless group chat confusion. Keep requests organized with clear volunteers, dates, and automatic status updates.",
+    description: "Set a time, date and expectations with clear in-app updates and calendar sync.",
+    detail: "Avoid endless group chat confusion. Keep requests organized with clear volunteers, dates and automatic status updates.",
   },
   {
     step: "06",
@@ -51,7 +51,7 @@ const STEPS = [
   {
     step: "08",
     title: "Stay Connected & Enjoy Life Together",
-    description: "Celebrate shared moments, post friendly updates, and strengthen neighborhood bonds over time.",
+    description: "Celebrate shared moments, post friendly updates and strengthen neighborhood bonds over time.",
     detail: "From coffee mornings to spontaneous block potlucks, turn simple daily interactions into lifelong supportive friendships.",
   },
 ];

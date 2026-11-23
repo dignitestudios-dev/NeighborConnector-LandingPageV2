@@ -34,32 +34,32 @@ export function CommunityStory() {
               Community Starts With Connection
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-ink-soft">
-              We have never had more ways to communicate. Yet neighbors, friends, and family often remain unaware of the support waiting a few doors away. Loneliness and isolation have become serious health concerns, especially for older adults and anyone navigating daily challenges.
+           Connection doesn’t have to begin with a problem. Sometimes, it begins with a conversation, an invitation, or a simple hello.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-ink-soft">
-              NeighborConnector™ takes a quieter, more personal path: a handful of people you already know and trust, gathered into a private micro-circle, close enough to truly show up for each other.
+              We have never had more ways to communicate. Yet neighbors, friends and family often remain unaware of the support waiting just a few doors away. Loneliness and isolation have become serious health concerns, especially for older adults and neighbors who could use a helping hand. NeighborConnector™ takes a quieter path: a handful of people you already know, in one private circle, close enough to actually show up for each other. Users may belong to multiple circles to meet different needs.
             </p>
           </Reveal>
 
           <Reveal delay={120} className="mt-10">
-            <ol className="flex flex-wrap items-center gap-x-3 gap-y-3">
+            <ol className="flex flex-wrap items-center gap-x-0.5 gap-y-3">
               <li className="flex items-center gap-3">
                 <span className="rounded-full border border-hairline bg-white px-4 py-2 text-sm font-medium text-ink-soft">
                   Disconnected
                 </span>
-                <span aria-hidden="true" className="h-px w-5 bg-hairline sm:w-7" />
+                <span aria-hidden="true" className="h-px w-2 bg-hairline sm:w-7" />
               </li>
               <li className="flex items-center gap-3">
                 <span className="rounded-full border border-hairline bg-white px-4 py-2 text-sm font-medium text-ink-soft">
                   Connected
                 </span>
-                <span aria-hidden="true" className="h-px w-5 bg-hairline sm:w-7" />
+                <span aria-hidden="true" className="h-px w-2 bg-hairline sm:w-7" />
               </li>
               <li className="flex items-center gap-3">
                 <span className="rounded-full border border-hairline bg-white px-4 py-2 text-sm font-medium text-ink-soft">
                   Supported
                 </span>
-                <span aria-hidden="true" className="h-px w-5 bg-hairline sm:w-7" />
+                <span aria-hidden="true" className="h-px w-2 bg-hairline sm:w-7" />
               </li>
               <li className="flex items-center gap-3">
                 <span className="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white shadow-soft">

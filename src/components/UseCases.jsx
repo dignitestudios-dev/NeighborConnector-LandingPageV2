@@ -40,7 +40,7 @@ const CARDS = [
     icon: CalendarDays,
     title: "Planning Something?",
     description:
-      "Organize dinners, gatherings, walks, and neighborhood activities.",
+      "Organize dinners, gatherings, walks and neighborhood activities.",
     delay: 210,
   },
   {
@@ -61,11 +61,16 @@ export function UseCases() {
   return (
     <section className="border-y border-hairline bg-mist/60 py-20 md:py-28">
       <div className="container-page">
-        <Reveal delay={0} className="max-w-2xl">
-          <span className="eyebrow">Everyday life</span>
-          <h2 className="mt-6 text-3xl font-extrabold text-ink sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
-            Sometimes, Community Looks Like the Little Things
-          </h2>
+        <Reveal delay={0} className="w-full">
+          <div className="max-w-2xl">
+            <span className="eyebrow">Everyday life</span>
+            <h2 className="mt-6 text-3xl font-extrabold text-ink sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
+              Sometimes, Community Looks Like the Little Things
+            </h2>
+          </div>
+          <p className="mt-6 w-full text-base sm:text-lg leading-relaxed text-ink-soft">
+            Small actions can make everyday life easier and more connected. When you’re away from home – Ask trusted people in your Circles about watering plants, checking the mail or helping with another small task. When you need a ride – Coordinate transportation to an appointment, event or errand with people in your Circles. When you’d like to get together – Invite your Circles to coffee, a walk, dinner, a game night or another shared activity. When you want to stay in touch – Share a message, photo, update or quick hello in your private Circles. When a check-in brings peace of mind – Use the optional Daily Check-in to let your Circles know you’re safe. It is not an emergency monitoring service.
+          </p>
         </Reveal>
 
         <div className="mt-12 grid auto-rows-fr gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -108,6 +113,12 @@ export function UseCases() {
             );
           })}
         </div>
+
+        <Reveal delay={120} className="mt-12 text-center">
+          <p className="text-lg sm:text-xl font-bold tracking-tight text-brand">
+            Intentional Connection. Intentional Community. Intentional Caring
+          </p>
+        </Reveal>
       </div>
     </section>
   );

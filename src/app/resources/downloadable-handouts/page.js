@@ -16,7 +16,7 @@ import { Footer } from "@/components/Footer";
 export const metadata = {
   title: "Downloadable Handouts — Resources | NeighborConnector™",
   description:
-    "Free printable and downloadable guides, worksheets, and handouts for building and organizing your trusted circle.",
+    "Free printable and downloadable guides, worksheets and handouts for building and organizing your trusted circle.",
 };
 
 const HANDOUTS = [
@@ -24,7 +24,7 @@ const HANDOUTS = [
     title: "What, Who & Why It Matters Guide",
     badge: "FREE PDF Guide",
     description:
-      "A complete foundational overview explaining what NeighborConnector is, who it serves, and the 5 key reasons why private micro-circles matter.",
+      "A complete foundational overview explaining what NeighborConnector is, who it serves and the 5 key reasons why private micro-circles matter.",
     pages: "Interactive & Printable Guide",
     format: "PDF Document",
     downloadUrl: "/assets/what-who-why-guide.pdf",
@@ -41,7 +41,7 @@ const HANDOUTS = [
     title: "Circle Living™ Companion Worksheet",
     badge: "FREE Interactive Worksheet",
     description:
-      "A fillable and printable tool to name your circle, map out members, choose daily check-in preferences, and assign support tasks.",
+      "A fillable and printable tool to name your circle, map out members, choose daily check-in preferences and assign support tasks.",
     pages: "Printable Template & Worksheet",
     format: "PDF Document",
     downloadUrl: "/assets/companion-worksheet.pdf",
@@ -58,7 +58,7 @@ const HANDOUTS = [
     title: "Getting Started Guide",
     badge: "FREE PDF Guide",
     description:
-      "Step-by-step handbook covering app download, profile setup, creating or joining circles, how to post, screenshots, and roadmap milestones.",
+      "Step-by-step handbook covering app download, profile setup, creating or joining circles, how to post, screenshots and roadmap milestones.",
     pages: "Complete Onboarding Guide",
     format: "PDF Document",
     downloadUrl: "/assets/getting-started-guide.pdf",
@@ -116,7 +116,7 @@ export default function DownloadableHandoutsPage() {
                 </h1>
 
                 <p className="mt-4 text-lg sm:text-xl text-ink-soft leading-relaxed">
-                  Free, easy-to-use printable worksheets, roadmaps, and foundational guides to help you introduce NeighborConnector™ to neighbors, friends, and family.
+                  Free, easy-to-use printable worksheets, roadmaps and foundational guides to help you introduce NeighborConnector™ to neighbors, friends and family.
                 </p>
               </Reveal>
             </div>

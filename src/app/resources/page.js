@@ -16,14 +16,14 @@ import { Footer } from "@/components/Footer";
 export const metadata = {
   title: "Resources & Community Toolkits — NeighborConnector™",
   description:
-    "Explore downloadable handouts, FAQs, app screenshots, outreach templates, and community acknowledgements for NeighborConnector™.",
+    "Explore downloadable handouts, FAQs, app screenshots, outreach templates and community acknowledgements for NeighborConnector™.",
 };
 
 const RESOURCE_SECTIONS = [
   {
     title: "Downloadable Handouts",
     description:
-      "Printable guides, the What/Who/Why Guide, and the fillable Circle Living™ Companion Worksheet.",
+      "Printable guides, the What/Who/Why Guide and the fillable Circle Living™ Companion Worksheet.",
     href: "/resources/downloadable-handouts",
     icon: FileDown,
     badge: "Print & PDF",
@@ -31,7 +31,7 @@ const RESOURCE_SECTIONS = [
   {
     title: "Frequently Asked Questions",
     description:
-      "Answers about how circles work, member privacy, daily check-in setup, and safety guarantees.",
+      "Answers about how circles work, member privacy, daily check-in setup and safety guarantees.",
     href: "/resources/faqs",
     icon: HelpCircle,
     badge: "Knowledgebase",
@@ -39,7 +39,7 @@ const RESOURCE_SECTIONS = [
   {
     title: "App Screenshots & Walkthrough",
     description:
-      "Visual walk-throughs of the circle home feed, daily reassurance check-ins, ride coordination, and chat.",
+      "Visual walk-throughs of the circle home feed, daily reassurance check-ins, ride coordination and chat.",
     href: "/resources/app-screenshots",
     icon: Smartphone,
     badge: "Visual Tour",
@@ -47,7 +47,7 @@ const RESOURCE_SECTIONS = [
   {
     title: "Community Outreach Materials",
     description:
-      "Ready-to-use invitation scripts, flyer copy, and neighborhood announcement blurbs for HOAs and groups.",
+      "Ready-to-use invitation scripts, flyer copy and neighborhood announcement blurbs for HOAs and groups.",
     href: "/resources/outreach-materials",
     icon: Megaphone,
     badge: "Toolkits",
@@ -55,7 +55,7 @@ const RESOURCE_SECTIONS = [
   {
     title: "Acknowledgements & Partners",
     description:
-      "Honoring Community Care Housing Foundation, pilot circle organizers, and volunteers across communities.",
+      "Honoring Community Care Housing Foundation, pilot circle organizers and volunteers across communities.",
     href: "/resources/acknowledgements",
     icon: Award,
     badge: "Community",
@@ -87,7 +87,7 @@ export default function ResourcesIndexPage() {
                 </h1>
 
                 <p className="mt-4 text-lg sm:text-xl text-ink-soft leading-relaxed">
-                  Everything you need to introduce NeighborConnector™ to neighbors, coordinate private circles, and answer everyday questions.
+                  Everything you need to introduce NeighborConnector™ to neighbors, coordinate private circles and answer everyday questions.
                 </p>
               </Reveal>
             </div>

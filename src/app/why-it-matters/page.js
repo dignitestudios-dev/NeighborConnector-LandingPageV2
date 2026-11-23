@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 export const metadata = {
   title: "What, Who & Why It Matters Guide — NeighborConnector™",
   description:
-    "Discover what NeighborConnector is, who it is built for, and why private micro-circles matter for stronger, more supportive communities.",
+    "Discover what NeighborConnector is, who it is built for and why private micro-circles matter for stronger, more supportive communities.",
 };
 
 export default function WhyItMattersPage() {

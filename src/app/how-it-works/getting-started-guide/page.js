@@ -24,7 +24,7 @@ import { RoadmapStepper } from "@/components/RoadmapStepper";
 export const metadata = {
   title: "Getting Started Guide — How It Works | NeighborConnector™",
   description:
-    "Your step-by-step guide to downloading NeighborConnector™, creating your profile, setting up private circles, posting updates, and discovering what makes Circle Living different.",
+    "Your step-by-step guide to downloading NeighborConnector™, creating your profile, setting up private circles, posting updates and discovering what makes Circle Living different.",
 };
 
 const SCREENSHOTS = [
@@ -36,7 +36,7 @@ const SCREENSHOTS = [
   },
   {
     title: "Coordinate Life & Outings",
-    desc: "Discreet requests for rides, chores, and everyday mutual aid.",
+    desc: "Discreet requests for rides, chores and everyday mutual aid.",
     webp: "/assets/how-it-works.webp",
     fallback: "/assets/how-it-works.png",
   },
@@ -76,7 +76,7 @@ export default function GettingStartedGuidePage() {
                 </h1>
 
                 <p className="mt-5 text-lg sm:text-xl text-ink-soft leading-relaxed max-w-2xl mx-auto">
-                  Welcome to NeighborConnector™. Follow these easy steps to get set up, invite your inner ring of neighbors or family, and start experiencing Circle Living™.
+                  Welcome to NeighborConnector™. Follow these easy steps to get set up, invite your inner ring of neighbors or family and start experiencing Circle Living™.
                 </p>
 
                 {/* PDF Download Button */}
@@ -433,7 +433,7 @@ export default function GettingStartedGuidePage() {
                     </span>
                     <h3 className="text-lg font-bold text-ink">Circle Chat</h3>
                     <p className="mt-2 text-xs sm:text-sm text-ink-soft leading-relaxed">
-                      Private group conversation, photo sharing, and event planning free from political debates or spam.
+                      Private group conversation, photo sharing and event planning free from political debates or spam.
                     </p>
                   </div>
                 </div>
@@ -463,7 +463,7 @@ export default function GettingStartedGuidePage() {
                 </h2>
 
                 <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed">
-                  Traditional social apps thrive on outrage, massive anonymous feeds, and ad impressions. NeighborConnector™ was designed with an opposite philosophy:
+                  Traditional social apps thrive on outrage, massive anonymous feeds and ad impressions. NeighborConnector™ was designed with an opposite philosophy:
                 </p>
               </Reveal>
             </div>
@@ -507,7 +507,7 @@ export default function GettingStartedGuidePage() {
                     </li>
                     <li className="flex items-start gap-2.5">
                       <span className="text-leaf-deep font-bold">✓</span>
-                      <span><strong>Everyday mutual support:</strong> Daily check-ins, rides, and chores.</span>
+                      <span><strong>Everyday mutual support:</strong> Daily check-ins, rides and chores.</span>
                     </li>
                   </ul>
                 </div>
@@ -537,7 +537,7 @@ export default function GettingStartedGuidePage() {
                 </h2>
 
                 <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed max-w-2xl mx-auto">
-                  A preview of how simple, uncluttered, and large-print friendly the app is for every generation.
+                  A preview of how simple, uncluttered and large-print friendly the app is for every generation.
                 </p>
               </Reveal>
             </div>

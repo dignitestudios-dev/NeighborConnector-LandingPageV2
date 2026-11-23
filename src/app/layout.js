@@ -10,7 +10,7 @@ export const metadata = {
     template: "%s | NeighborConnector™",
   },
   description:
-    "A free app from a nonprofit: build a small, private circle of neighbors, friends, and family to check in, ask for help, and stay connected. No ads, no public feeds.",
+    "A free app from a nonprofit: build a small, private circle of neighbors, friends and family to check in, ask for help and stay connected. No ads, no public feeds.",
   keywords: [
     "NeighborConnector",
     "neighborhood app",
@@ -44,7 +44,7 @@ export const metadata = {
   openGraph: {
     title: "NeighborConnector™ — Private Circles for Neighbors & Family",
     description:
-      "A free app from a nonprofit: build a small, private circle of neighbors, friends, and family to check in, ask for help, and stay connected. No ads, no public feeds.",
+      "A free app from a nonprofit: build a small, private circle of neighbors, friends and family to check in, ask for help and stay connected. No ads, no public feeds.",
     url: siteUrl,
     siteName: "NeighborConnector™",
     locale: "en_US",
@@ -62,7 +62,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "NeighborConnector™ — Private Circles for Neighbors & Family",
     description:
-      "A free app from a nonprofit: build a small, private circle of neighbors, friends, and family to check in, ask for help, and stay connected. No ads, no public feeds.",
+      "A free app from a nonprofit: build a small, private circle of neighbors, friends and family to check in, ask for help and stay connected. No ads, no public feeds.",
     images: ["/assets/hero.webp"],
   },
   robots: {
@@ -106,7 +106,7 @@ const jsonLd = {
         priceCurrency: "USD",
       },
       description:
-        "Free private circle app for neighbors, friends, and family to check in, ask for help, and coordinate everyday support without ads or public feeds.",
+        "Free private circle app for neighbors, friends and family to check in, ask for help and coordinate everyday support without ads or public feeds.",
       author: {
         "@id": `${siteUrl}/#organization`,
       },
