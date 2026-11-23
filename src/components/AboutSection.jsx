@@ -4,8 +4,8 @@ import { Reveal } from "./Reveal";
 const PILLARS = [
   {
     icon: Building2,
-    title: "Affordable Housing",
-    description: "Creating homes people can actually afford.",
+    title: "Connected & Shared Housing",
+    description: "Promotes Connected and Shared Housing Opportunities.",
     delay: 0,
   },
   {
@@ -16,8 +16,8 @@ const PILLARS = [
   },
   {
     icon: Sprout,
-    title: "Long-Term Impact",
-    description: "Building neighborhoods that last generations.",
+    title: "The Bigger Idea",
+    description: "Help to make Communities stronger, friendlier and more connected.",
     delay: 180,
   },
 ];
@@ -33,10 +33,13 @@ export function AboutSection() {
               Built by Community Care Housing
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-ink-soft">
-              NeighborConnector™ was created by Community Care Housing Foundation, a nonprofit organization dedicated to affordable housing and stronger, more supportive communities.
+              NeighborConnector™ was created by Community Care Housing, a 501(c)(3) nonprofit organization dedicated to connected and shared housing. This app is part of our mission to help people live more connected in stronger, more supported communities.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-ink-soft">
-              This app is part of our mission to help people live more connected, supported lives — which is why it’s completely free, with no ads and no data selling.
+              This is a free app made possible through donor funding which is why it’s completely free, with no ads and no data selling.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-ink-soft">
+              Whether you begin with family, a few neighbors, friends or a community group, every Circle is an opportunity to make Connection more Intentional. Stronger Communities begin with Intentional Connection and Caring.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3">
               <a
@@ -58,22 +61,26 @@ export function AboutSection() {
             {/* How to Help List */}
             <div className="mt-10 rounded-2xl bg-white border border-hairline p-6 shadow-xs">
               <h3 className="text-base font-bold text-ink mb-3">How You Can Help</h3>
-              <ul className="space-y-2.5 text-sm text-ink-soft">
+              <ul className="space-y-3 text-sm text-ink-soft">
                 <li className="flex items-start gap-2.5">
                   <span className="grid size-5 place-items-center rounded-full bg-sprout text-leaf-deep font-bold text-xs shrink-0 mt-0.5">✓</span>
-                  <span><strong>Start a local circle:</strong> Invite 2–10 neighbors on your street, floor, or block.</span>
+                  <span className="font-medium text-ink">Tell/Teach Others About NeighborConnector™</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="grid size-5 place-items-center rounded-full bg-sprout text-leaf-deep font-bold text-xs shrink-0 mt-0.5">✓</span>
-                  <span><strong>Look out for someone living alone:</strong> Add them to a daily reassurance morning check-in.</span>
+                  <span className="font-medium text-ink">Request a Live Presentation or Webinar for a neighborhood, HOA, senior community, church, nonprofit or other community group.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="grid size-5 place-items-center rounded-full bg-sprout text-leaf-deep font-bold text-xs shrink-0 mt-0.5">✓</span>
-                  <span><strong>Offer practical assistance:</strong> Lend a tool, shovel a walkway, or offer a ride to a medical appointment.</span>
+                  <span className="font-medium text-ink">Become a Community Connector Ambassador</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="grid size-5 place-items-center rounded-full bg-sprout text-leaf-deep font-bold text-xs shrink-0 mt-0.5">✓</span>
-                  <span><strong>Spread the word:</strong> Share NeighborConnector™ with your local HOA, church group, or community center.</span>
+                  <span className="font-medium text-ink">Be a Paid Advertiser or Provide Giveaways</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="grid size-5 place-items-center rounded-full bg-sprout text-leaf-deep font-bold text-xs shrink-0 mt-0.5">✓</span>
+                  <span className="font-medium text-ink">Be a Sponsor</span>
                 </li>
               </ul>
             </div>

@@ -28,7 +28,7 @@ const SUPPORT_CATEGORIES = [
   { id: "rides", label: "Rides & Appointments", desc: "Doctor appointments, airport rides, grocery runs, or errands." },
   { id: "chores", label: "Home Chores & Tool Lending", desc: "Yard work, snow shoveling, changing lightbulbs, borrowing a ladder." },
   { id: "pets-plants", label: "Pet Care & Plant Watering", desc: "Feeding pets or watering indoor plants while someone is away." },
-  { id: "social", label: "Companionship & Gatherings", desc: "Coffee dates, neighborhood walks, potlucks, and friendly conversations." },
+  { id: "social", label: "Companionship & Gatherings", desc: "Coffee dates, neighborhood walks, potlucks and friendly conversations." },
   { id: "emergency", label: "Emergency Contact Backup", desc: "Trusted local neighbors who can check on you in an urgent situation." },
 ];
 
@@ -84,36 +84,123 @@ export function CompanionWorksheet() {
     <section id="companion-worksheet" className="scroll-mt-28 py-16 md:py-24">
       <div className="container-page max-w-4xl">
         <Reveal delay={0}>
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-hairline pb-6">
-            <div>
-              <span className="eyebrow">
-                <FileSpreadsheet className="size-3.5 text-leaf-deep" />
-                Planning Tool
-              </span>
-              <h2 className="mt-3 text-3xl font-extrabold text-ink sm:text-4xl tracking-tight">
+          <div className="border-b border-hairline pb-8">
+            <span className="eyebrow">
+              <FileSpreadsheet className="size-3.5 text-leaf-deep" />
+              Planning Tool
+            </span>
+
+            {/* Header + Action Buttons Side-by-Side */}
+            <div className="mt-3 flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <h2 className="text-3xl font-extrabold text-ink sm:text-4xl tracking-tight">
                 Circle Living™ <span className="text-gradient-brand">Companion Worksheet</span>
               </h2>
-              <p className="mt-2 text-base text-ink-soft max-w-2xl">
-                Use this practical planning worksheet to organize your private circle (2 to 10 people), decide what support you will exchange, and establish your trusted safety net.
-              </p>
+
+              <div className="flex flex-wrap items-center gap-3 shrink-0 print:hidden">
+                <a
+                  href="/assets/companion-worksheet.pdf"
+                  download="Circle-Living-Companion-Worksheet.pdf"
+                  className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white shadow-lift hover:bg-brand-bright transition-all cursor-pointer"
+                >
+                  <Printer className="size-4" />
+                  <span>Download the Companion Worksheet (FREE)</span>
+                </a>
+                <button
+                  type="button"
+                  onClick={handlePrint}
+                  className="inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-4 py-2.5 text-sm font-medium text-ink hover:bg-mist/30 transition-all cursor-pointer"
+                >
+                  Print / Save PDF
+                </button>
+              </div>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3 self-start sm:self-auto shrink-0 print:hidden">
-              <a
-                href="/assets/companion-worksheet.pdf"
-                download="Circle-Living-Companion-Worksheet.pdf"
-                className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white shadow-lift hover:bg-brand-bright transition-all cursor-pointer"
-              >
-                <Printer className="size-4" />
-                <span>Download the Companion Worksheet (FREE)</span>
-              </a>
-              <button
-                type="button"
-                onClick={handlePrint}
-                className="inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-4 py-2.5 text-sm font-medium text-ink hover:bg-mist/30 transition-all cursor-pointer"
-              >
-                Print / Save PDF
-              </button>
+            <p className="mt-3 text-base text-ink-soft max-w-2xl leading-relaxed">
+              Use this practical planning worksheet to organize your private circle (2 to 10 people), decide what support you will exchange and establish your trusted safety net.
+            </p>
+
+            <div className="mt-6 pt-5 border-t border-hairline/70">
+              <p className="text-base font-semibold text-ink">
+                Is there someone in your life who might appreciate a little more connection, a helping hand, or an invitation to do something together?
+              </p>
+
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                <div className="flex items-start gap-2.5 rounded-2xl border border-hairline bg-cream/40 p-3.5 shadow-2xs transition-all hover:bg-cream/70">
+                  <span className="grid size-5 shrink-0 place-items-center rounded-full bg-sprout text-leaf-deep font-bold text-xs mt-0.5">
+                    ✓
+                  </span>
+                  <span className="text-xs sm:text-sm text-ink-soft leading-snug">
+                    A family member or friend you want to stay closer to.
+                  </span>
+                </div>
+
+                <div className="flex items-start gap-2.5 rounded-2xl border border-hairline bg-cream/40 p-3.5 shadow-2xs transition-all hover:bg-cream/70">
+                  <span className="grid size-5 shrink-0 place-items-center rounded-full bg-sprout text-leaf-deep font-bold text-xs mt-0.5">
+                    ✓
+                  </span>
+                  <span className="text-xs sm:text-sm text-ink-soft leading-snug">
+                    A neighbor you would like to get to know better.
+                  </span>
+                </div>
+
+                <div className="flex items-start gap-2.5 rounded-2xl border border-hairline bg-cream/40 p-3.5 shadow-2xs transition-all hover:bg-cream/70">
+                  <span className="grid size-5 shrink-0 place-items-center rounded-full bg-sprout text-leaf-deep font-bold text-xs mt-0.5">
+                    ✓
+                  </span>
+                  <span className="text-xs sm:text-sm text-ink-soft leading-snug">
+                    Someone who lives alone or might appreciate a friendly check-in.
+                  </span>
+                </div>
+
+                <div className="flex items-start gap-2.5 rounded-2xl border border-hairline bg-cream/40 p-3.5 shadow-2xs transition-all hover:bg-cream/70">
+                  <span className="grid size-5 shrink-0 place-items-center rounded-full bg-sprout text-leaf-deep font-bold text-xs mt-0.5">
+                    ✓
+                  </span>
+                  <span className="text-xs sm:text-sm text-ink-soft leading-snug">
+                    A walking partner, church friend, or community acquaintance.
+                  </span>
+                </div>
+
+                <div className="flex items-start gap-2.5 rounded-2xl border border-hairline bg-cream/40 p-3.5 shadow-2xs transition-all hover:bg-cream/70">
+                  <span className="grid size-5 shrink-0 place-items-center rounded-full bg-sprout text-leaf-deep font-bold text-xs mt-0.5">
+                    ✓
+                  </span>
+                  <span className="text-xs sm:text-sm text-ink-soft leading-snug">
+                    Someone who travels or spends part of the year away from home.
+                  </span>
+                </div>
+
+                <div className="flex items-start gap-2.5 rounded-2xl border border-hairline bg-cream/40 p-3.5 shadow-2xs transition-all hover:bg-cream/70">
+                  <span className="grid size-5 shrink-0 place-items-center rounded-full bg-sprout text-leaf-deep font-bold text-xs mt-0.5">
+                    ✓
+                  </span>
+                  <span className="text-xs sm:text-sm text-ink-soft leading-snug">
+                    Someone who could use a ride, help with a task, or company at an event.
+                  </span>
+                </div>
+
+                <div className="flex items-start gap-2.5 rounded-2xl border border-hairline bg-cream/40 p-3.5 shadow-2xs transition-all hover:bg-cream/70">
+                  <span className="grid size-5 shrink-0 place-items-center rounded-full bg-sprout text-leaf-deep font-bold text-xs mt-0.5">
+                    ✓
+                  </span>
+                  <span className="text-xs sm:text-sm text-ink-soft leading-snug">
+                    Someone you haven’t seen lately but would like to reconnect with.
+                  </span>
+                </div>
+
+                <div className="flex items-start gap-2.5 rounded-2xl border border-hairline bg-cream/40 p-3.5 shadow-2xs transition-all hover:bg-cream/70">
+                  <span className="grid size-5 shrink-0 place-items-center rounded-full bg-sprout text-leaf-deep font-bold text-xs mt-0.5">
+                    ✓
+                  </span>
+                  <span className="text-xs sm:text-sm text-ink-soft leading-snug">
+                    Someone who would enjoy being invited to more activities.
+                  </span>
+                </div>
+              </div>
+
+              <p className="mt-5 text-sm sm:text-base font-medium text-ink bg-mist/40 rounded-2xl p-4 border border-hairline">
+                And what about <strong>YOU</strong>? NeighborConnector™ can help <strong>YOU</strong> stay in touch, make plans, coordinate everyday activities, offer support, or build relationships with people you want to know better.
+              </p>
             </div>
           </div>
         </Reveal>
@@ -304,7 +391,7 @@ export function CompanionWorksheet() {
               />
               <div className="text-xs leading-relaxed text-ink/80">
                 <span className="font-bold text-brand block mb-1">Holly's Circle Living™ Tip:</span>
-                "Start with just 2 or 3 people you already know and trust. Once you create your private circle in NeighborConnector™, you can send them your invite code. You control every member approval, and everything shared stays 100% private!"
+                "Start with just 2 or 3 people you already know and trust. Once you create your private circle in NeighborConnector™, you can send them your invite code. You control every member approval and everything shared stays 100% private!"
               </div>
             </div>
           </div>

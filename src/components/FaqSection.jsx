@@ -150,11 +150,11 @@ export const FAQ_CATEGORIES = [
 ];
 
 function formatAnswer(text) {
-  // Replace links, emails, and phone numbers with clickable interactive elements
+  // Replace links, emails and phone numbers with clickable interactive elements
   const parts = [];
   let remaining = text;
 
-  // Pattern matches emails, phone numbers, and website mentions
+  // Pattern matches emails, phone numbers and website mentions
   const pattern = /(Info@CommunityCareHousing\.org|\(720\)-693-2522|Community Care Housing\.org)/gi;
   let match;
   let lastIdx = 0;

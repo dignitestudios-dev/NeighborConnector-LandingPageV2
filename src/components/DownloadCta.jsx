@@ -16,10 +16,13 @@ export function DownloadCta() {
           <div className="relative grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
               <h2 className="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl lg:leading-[1.05]">
-                Your Circle Is Waiting
+                Your Circles Are Waiting
               </h2>
-              <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/80">
-                Download NeighborConnector™ free and start building the kind of neighborhood where people actually look out for each other.
+              <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/90">
+                Download the FREE NeighborConnector™ App. See what Stronger Connections can bring to Everyday Life.
+              </p>
+              <p className="mt-3 text-base font-semibold text-sprout">
+                Small Circles. Real Relationships. Meaningful Support.
               </p>
 
               <div className="mt-9 flex flex-wrap items-center gap-4">

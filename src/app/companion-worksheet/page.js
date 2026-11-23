@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 export const metadata = {
   title: "Companion Worksheet — Circle Living™ | NeighborConnector™",
   description:
-    "Interactive and printable companion worksheet to plan and organize your private circle with neighbors, friends, and family.",
+    "Interactive and printable companion worksheet to plan and organize your private circle with neighbors, friends and family.",
 };
 
 export default function CompanionWorksheetPage() {

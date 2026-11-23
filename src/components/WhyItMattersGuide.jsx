@@ -19,21 +19,21 @@ import { Reveal } from "./Reveal";
 const WHO_IS_IT_FOR = [
   {
     title: "Older Adults & Living Alone",
-    desc: "Quiet peace of mind through daily 'Safe' check-ins, quick reassurance, and knowing someone local cares.",
+    desc: "Quiet peace of mind through daily 'Safe' check-ins, quick reassurance and knowing someone local cares.",
     icon: Heart,
     bg: "bg-sprout",
     color: "text-leaf-deep",
   },
   {
     title: "Street & Block Neighbors",
-    desc: "Coordinate package watching, tool borrowing, lawn mowing, snow shoveling, and local awareness.",
+    desc: "Coordinate package watching, tool borrowing, lawn mowing, snow shoveling and local awareness.",
     icon: Users,
     bg: "bg-mist",
     color: "text-brand",
   },
   {
     title: "Families & Close Friends",
-    desc: "Keep kids, parents, and grandparents aligned across towns with private messaging, rides, and schedules.",
+    desc: "Keep kids, parents and grandparents aligned across towns with private messaging, rides and schedules.",
     icon: HeartHandshake,
     bg: "bg-sprout",
     color: "text-leaf-deep",
@@ -89,7 +89,7 @@ export function WhyItMattersGuide() {
               What, Who &amp; <span className="text-gradient-brand">Why It Matters</span> Guide
             </h2>
             <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed">
-              NeighborConnector™ was founded on a simple truth: communities flourish when small, private groups of trusted people stay intentionally connected. Here is what we do, who we serve, and why it matters.
+              NeighborConnector™ was founded on a simple truth: communities flourish when small, private groups of trusted people stay intentionally connected. Here is what we do, who we serve and why it matters.
             </p>
           </div>
         </Reveal>
@@ -112,7 +112,7 @@ export function WhyItMattersGuide() {
               </div>
 
               <p className="mt-4 text-sm sm:text-base text-ink-soft leading-relaxed">
-                NeighborConnector™ is a free, nonprofit mobile platform that lets you form small, invite-only circles (typically 2 to 10 people) with neighbors, friends, and family. It is built strictly around private circles — with no public feeds, no stranger noise, no advertising, and zero data selling.
+                NeighborConnector™ is a free, nonprofit mobile platform that lets you form small, invite-only circles (typically 2 to 10 people) with neighbors, friends and family. It is built strictly around private circles — with no public feeds, no stranger noise, no advertising and zero data selling.
               </p>
 
               <div className="mt-6 grid gap-3 sm:grid-cols-3">
@@ -122,11 +122,11 @@ export function WhyItMattersGuide() {
                 </div>
                 <div className="rounded-2xl bg-mist/50 p-4 border border-hairline">
                   <span className="font-bold text-xs text-brand block mb-1">Practical Mutual Aid</span>
-                  <p className="text-xs text-ink-soft">Daily check-ins, occasional rides, tool lending, and chore coordination.</p>
+                  <p className="text-xs text-ink-soft">Daily check-ins, occasional rides, tool lending and chore coordination.</p>
                 </div>
                 <div className="rounded-2xl bg-mist/50 p-4 border border-hairline">
                   <span className="font-bold text-xs text-brand block mb-1">Total Privacy</span>
-                  <p className="text-xs text-ink-soft">No public profiles, no stranger browsing, and every member is approved by you.</p>
+                  <p className="text-xs text-ink-soft">No public profiles, no stranger browsing and every member is approved by you.</p>
                 </div>
               </div>
             </div>

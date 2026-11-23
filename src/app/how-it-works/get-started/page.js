@@ -72,7 +72,7 @@ export default function GetStartedPage() {
                 </h1>
 
                 <p className="mt-5 text-lg sm:text-xl text-ink-soft leading-relaxed">
-                  NeighborConnector™ helps you build strong relationships, get things done, and look out for one another — give help, get help — so you can live life with more confidence and connection.
+                  NeighborConnector™ helps you build strong relationships, get things done and look out for one another — give help, get help — so you can live life with more confidence and connection.
                 </p>
               </Reveal>
             </div>
@@ -86,7 +86,7 @@ export default function GetStartedPage() {
             <Reveal delay={120} className="mt-14">
               <div className="rounded-3xl bg-gradient-to-r from-brand to-brand-bright p-8 text-center text-white shadow-lift">
                 <h3 className="text-2xl sm:text-3xl font-extrabold">
-                  Build your Circle(s) before you need them.
+                  Build your Circles before you need them.
                 </h3>
                 <p className="mt-2 text-base sm:text-lg text-white/85">
                   Stronger Together. Small steps. Big impact.

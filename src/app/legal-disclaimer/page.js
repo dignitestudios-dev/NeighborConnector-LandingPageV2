@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Legal Disclaimer — NeighborConnector™",
-  description: "Legal disclaimer, terms of use scope, and emergency notice for NeighborConnector™.",
+  description: "Legal disclaimer, terms of use scope and emergency notice for NeighborConnector™.",
 };
 
 export default function LegalDisclaimerPage() {
@@ -51,22 +51,22 @@ export default function LegalDisclaimerPage() {
 
               <h2 className="text-xl font-bold text-[#1D2A29] pt-2">1. General Information Only</h2>
               <p>
-                NeighborConnector™ is sponsored and made available by Community Care Housing Foundation as a free digital tool designed to facilitate communication, mutual support, and neighborhood cooperation among private circles of consenting individuals.
+                NeighborConnector™ is sponsored and made available by Community Care Housing Foundation as a free digital tool designed to facilitate communication, mutual support and neighborhood cooperation among private circles of consenting individuals.
               </p>
 
               <h2 className="text-xl font-bold text-[#1D2A29] pt-2">2. No Guarantee of Response or Service</h2>
               <p>
-                Requests for assistance, rides, chores, and check-ins made via NeighborConnector™ rely entirely on voluntary responses from independent members of your personal circles. Neither NeighborConnector™ nor Community Care Housing Foundation guarantees that any request will be fulfilled, answered, or responded to in a timely manner.
+                Requests for assistance, rides, chores and check-ins made via NeighborConnector™ rely entirely on voluntary responses from independent members of your personal circles. Neither NeighborConnector™ nor Community Care Housing Foundation guarantees that any request will be fulfilled, answered, or responded to in a timely manner.
               </p>
 
               <h2 className="text-xl font-bold text-[#1D2A29] pt-2">3. User Responsibility &amp; Safety</h2>
               <p>
-                Users are solely responsible for vetting who they invite into their private circles. NeighborConnector™ encourages members to only invite neighbors, friends, and family members they already know and trust in the physical world.
+                Users are solely responsible for vetting who they invite into their private circles. NeighborConnector™ encourages members to only invite neighbors, friends and family members they already know and trust in the physical world.
               </p>
 
               <h2 className="text-xl font-bold text-[#1D2A29] pt-2">4. Limitation of Liability</h2>
               <p>
-                To the fullest extent permitted by applicable law, Community Care Housing Foundation, its officers, directors, employees, and agents shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use the platform.
+                To the fullest extent permitted by applicable law, Community Care Housing Foundation, its officers, directors, employees and agents shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use the platform.
               </p>
 
               <div className="pt-6 border-t border-[#285A48]/10 text-sm text-[#5C6E6B]">

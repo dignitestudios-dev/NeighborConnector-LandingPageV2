@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 export const metadata = {
   title: "Frequently Asked Questions — Resources | NeighborConnector™",
   description:
-    "Find answers about NeighborConnector™: privacy, daily check-ins, creating private circles, rides, chores, and how it works.",
+    "Find answers about NeighborConnector™: privacy, daily check-ins, creating private circles, rides, chores and how it works.",
 };
 
 export default function ResourcesFaqPage() {

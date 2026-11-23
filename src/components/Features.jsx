@@ -6,7 +6,7 @@ export function Features() {
     <section id="features" className="scroll-mt-24 border-y border-hairline bg-cream/70 py-20 md:py-28">
       <div className="container-page">
         <Reveal delay={0} className="max-w-2xl">
-          <span className="eyebrow">Features</span>
+          <span className="eyebrow">One of a Kind App</span>
           <h2 className="mt-6 text-3xl font-extrabold text-ink sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
             Everything You Need to Stay Connected
           </h2>
@@ -22,7 +22,7 @@ export function Features() {
               Your People. Your Circle.
             </h3>
             <p className="mt-3 max-w-lg leading-relaxed text-ink-soft">
-              Create or join verified micro-circles where trusted neighbors, friends, and family can communicate, share updates, ask for help, and plan activities. You approve every request to join.
+              Create or join verified micro-circles where trusted neighbors, friends and family can communicate, share updates, ask for help and plan activities. You approve every request to join.
             </p>
             <picture>
               <source srcSet="/assets/how-it-works.webp" type="image/webp" />
@@ -79,7 +79,7 @@ export function Features() {
                 Stay Connected, Without the Noise
               </h3>
               <p className="mt-3 leading-relaxed text-ink-soft">
-                Message your circle privately, share photos, and keep conversations going — no public feeds, no ads, no unnecessary noise.
+                Message your circle privately, share photos and keep conversations going — no public feeds, no ads, no unnecessary noise.
               </p>
               <div className="mt-6 space-y-3">
                 <div className="max-w-[85%] rounded-3xl rounded-bl-md bg-mist px-4 py-3 text-sm text-ink">
@@ -100,14 +100,17 @@ export function Features() {
             <div className="grid items-center gap-10 lg:grid-cols-2">
               <div>
                 <span className="eyebrow">
-                  <Sparkles className="size-3.5" aria-hidden="true" />
+                  {/* <Sparkles className="size-3.5" aria-hidden="true" /> */}
                   Ask Holly
                 </span>
                 <h3 className="mt-5 text-2xl font-bold text-ink sm:text-3xl">
                   Meet Holly, Your Personal Guide
                 </h3>
                 <p className="mt-4 max-w-lg leading-relaxed text-ink-soft">
-                  Holly is your friendly in-app assistant. She answers questions as you learn the app, step by step, and she understands that not everyone is comfortable with technology.
+                  Don’t worry if technology isn’t your favorite thing. NeighborConnector™ is designed with large, readable text, clear labels, high-contrast colors, simple navigation and generous tap areas.
+                </p>
+                <p className="mt-3 max-w-lg leading-relaxed text-ink-soft">
+                  <strong>Need Help? Ask Holly.</strong> Holly is your friendly in-app assistant. Click where you see her and she answers questions as you learn the app, step by step and she understands that not everyone is comfortable with technology.
                 </p>
               </div>
 

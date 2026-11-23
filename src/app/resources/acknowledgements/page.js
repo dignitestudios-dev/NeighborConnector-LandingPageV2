@@ -17,7 +17,7 @@ import { Footer } from "@/components/Footer";
 export const metadata = {
   title: "Acknowledgements — Resources | NeighborConnector™",
   description:
-    "Honoring our sponsors, donors, advertisers, and community connection ambassadors.",
+    "Honoring our sponsors, donors, advertisers and community connection ambassadors.",
 };
 
 export default function AcknowledgementsPage() {
@@ -37,7 +37,7 @@ export default function AcknowledgementsPage() {
                 Acknowledgements
               </h1>
               <p className="mt-4 text-lg text-[#4A5D5A] max-w-2xl mx-auto">
-                Celebrating the community supporters, generous donors, sponsors, and grassroots ambassadors who make NeighborConnector™ possible.
+                Celebrating the community supporters, generous donors, sponsors and grassroots ambassadors who make NeighborConnector™ possible.
               </p>
             </div>
           </Reveal>
@@ -61,7 +61,7 @@ export default function AcknowledgementsPage() {
                   </div>
                 </div>
                 <p className="text-sm text-[#4A5D5A] leading-relaxed">
-                  We are grateful to our foundational community partners and organizational sponsors who fund the technology, safety infrastructure, and ongoing operations of NeighborConnector™.
+                  We are grateful to our foundational community partners and organizational sponsors who fund the technology, safety infrastructure and ongoing operations of NeighborConnector™.
                 </p>
               </div>
             </Reveal>
@@ -83,7 +83,7 @@ export default function AcknowledgementsPage() {
                   </div>
                 </div>
                 <p className="text-sm text-[#4A5D5A] leading-relaxed">
-                  A sincere thank you to individual donors and philanthropic supporters whose charitable gifts ensure NeighborConnector™ remains free for neighbors, seniors, and families everywhere.
+                  A sincere thank you to individual donors and philanthropic supporters whose charitable gifts ensure NeighborConnector™ remains free for neighbors, seniors and families everywhere.
                 </p>
               </div>
             </Reveal>
@@ -127,7 +127,7 @@ export default function AcknowledgementsPage() {
                   </div>
                 </div>
                 <p className="text-sm text-[#4A5D5A] leading-relaxed">
-                  Our grassroots leaders, neighborhood block captains, and volunteer advocates who introduce Circle Living™ to their local areas.
+                  Our grassroots leaders, neighborhood block captains and volunteer advocates who introduce Circle Living™ to their local areas.
                 </p>
 
                 {/* Webinar / Presentation invitation callout */}

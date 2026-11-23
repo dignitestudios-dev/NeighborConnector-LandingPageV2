@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Child Safety Policy — NeighborConnector™",
-  description: "Child safety standards, protection policies, and family privacy on NeighborConnector™.",
+  description: "Child safety standards, protection policies and family privacy on NeighborConnector™.",
 };
 
 export default function ChildSafetyPolicyPage() {
@@ -45,7 +45,7 @@ export default function ChildSafetyPolicyPage() {
                   Our Commitment to Youth and Family Protection
                 </strong>
                 <p className="text-sm">
-                  NeighborConnector™ is engineered with privacy-by-design. We maintain an invite-only micro-circle model with zero public discovery, no open search directories, and no algorithmic recommendation feeds.
+                  NeighborConnector™ is engineered with privacy-by-design. We maintain an invite-only micro-circle model with zero public discovery, no open search directories and no algorithmic recommendation feeds.
                 </p>
               </div>
 

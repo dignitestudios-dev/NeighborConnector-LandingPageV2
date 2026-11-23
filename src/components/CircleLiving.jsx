@@ -144,7 +144,7 @@ export function CircleLiving() {
             Welcome to Circle Living™
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-            NeighborConnector™ is built around small, trusted “micro-circles” of neighbors, friends, and family — the few people you want close, not the hundreds you don’t.
+            NeighborConnector™ is built around small, trusted “micro-circles” of neighbors, friends and family — the few people you want close, not the hundreds you don’t.
           </p>
         </Reveal>
 
@@ -174,6 +174,18 @@ export function CircleLiving() {
             })}
           </div>
         </div>
+
+        {/* Reflection & Callout Card Below Cards */}
+        <Reveal delay={150} className="mt-14 max-w-3xl mx-auto">
+          <div className="surface-card p-7 sm:p-9 rounded-3xl border border-hairline bg-gradient-to-br from-cream/60 via-white to-sprout/30 shadow-soft text-center">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-ink tracking-tight">
+              Build your Circles before you need them.
+            </h3>
+            <p className="mt-3.5 text-base sm:text-lg leading-relaxed text-ink-soft max-w-2xl mx-auto">
+              Your relationships are the heart of Circle Living™. NeighborConnector™ makes it easier to bring people together in small, trusted Circles. Your Circles might include family, friends, neighbors, church friends, walking partners, or people you enjoy spending time with.
+            </p>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

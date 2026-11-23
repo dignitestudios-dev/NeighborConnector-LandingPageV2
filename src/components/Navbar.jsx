@@ -296,7 +296,7 @@ export function Navbar() {
               </div>
             </li>
 
-            {/* 3. How It Works with Dropdown: Your Circle(s) are Waiting, 8-Step Roadmap, Features */}
+            {/* 3. How It Works with Dropdown: Your Circles are Waiting, 8-Step Roadmap, Features */}
             <li
               className="relative"
               onMouseEnter={handleHowMouseEnter}
