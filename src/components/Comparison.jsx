@@ -115,7 +115,7 @@ export function Comparison() {
               <MessageSquareText className="size-6" aria-hidden="true" />
             </span>
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-brand">New</span>
+              {/* <span className="text-xs font-bold uppercase tracking-wider text-brand">New</span> */}
               <h3 className="text-xl sm:text-2xl font-extrabold text-ink mt-0.5">
                 Rather than Text Messaging
               </h3>

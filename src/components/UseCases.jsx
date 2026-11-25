@@ -14,6 +14,7 @@ const CARDS = [
     webpImage: "/assets/photo-help.webp",
     imageAlt:
       "A neighbor helping an older woman carry groceries up her driveway",
+    imagePosition: "object-[center_20%]",
     icon: HandHeart,
     title: "Need a Hand?",
     description:
@@ -23,7 +24,8 @@ const CARDS = [
   {
     image: "/assets/photo-walk.jpg",
     imageAlt:
-      "Two friends walking outdoors together on a sunny neighborhood path",
+      "Two friends and neighbors smiling warmly while taking an outdoor walk together",
+    imagePosition: "object-[center_30%]",
     icon: Footprints,
     title: "Going for a Walk?",
     description: "Invite someone from your circle to join you.",
@@ -32,7 +34,8 @@ const CARDS = [
   {
     image: "/assets/photo-checkin.jpg",
     imageAlt:
-      "A neighbor peacefully checking in on their phone from home",
+      "A friendly neighbor checking her phone and smiling with peace of mind",
+    imagePosition: "object-[center_20%]",
     icon: ShieldCheck,
     title: "Checking In",
     description: "Let people know you're safe and doing well.",
@@ -43,6 +46,7 @@ const CARDS = [
     webpImage: "/assets/photo-gathering.webp",
     imageAlt:
       "Neighbors of different ages sharing dinner at a long table under string lights",
+    imagePosition: "object-center",
     icon: CalendarDays,
     title: "Planning Something?",
     description:
@@ -53,6 +57,7 @@ const CARDS = [
     image: "/assets/photo-ride.jpg",
     imageAlt:
       "A car ride being coordinated between trusted companions",
+    imagePosition: "object-center",
     icon: Car,
     title: "Need a Ride?",
     description: "Coordinate transportation with people you trust.",
@@ -62,6 +67,7 @@ const CARDS = [
     image: "/assets/photo-hello.jpg",
     imageAlt:
       "Friends and neighbors laughing and greeting each other warmly",
+    imagePosition: "object-center",
     icon: Smile,
     title: "Just Saying Hello",
     description: "Sometimes connection doesn't need a reason.",
@@ -106,7 +112,7 @@ export function UseCases() {
                       height={533}
                       loading="lazy"
                       decoding="async"
-                      className="h-48 w-full object-cover"
+                      className={`h-52 w-full object-cover ${card.imagePosition || "object-center"}`}
                     />
                   </picture>
                 )}
