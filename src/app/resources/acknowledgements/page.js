@@ -37,7 +37,7 @@ export default function AcknowledgementsPage() {
                 Acknowledgements
               </h1>
               <p className="mt-4 text-lg text-[#4A5D5A] max-w-2xl mx-auto">
-                Celebrating the community supporters, generous donors, sponsors and grassroots ambassadors who make NeighborConnector™ possible.
+                Celebrating the Community Supporters, Generous Donors, Sponsors and Grassroots Ambassadors who make NeighborConnector™ possible.
               </p>
             </div>
           </Reveal>
@@ -139,7 +139,7 @@ export default function AcknowledgementsPage() {
                         Host a Webinar or Live Presentation for Your Group
                       </p>
                       <p className="text-xs text-[#4A5D5A] mt-0.5">
-                        Interested in bringing NeighborConnector™ to your HOA, church group, senior community, or civic association? We invite people to host webinars or live presentations for groups.
+                        Interested in bringing NeighborConnector™ to your HOA, church group, senior community or civic association? We invite people to host webinars or live presentations for groups.
                       </p>
                     </div>
                   </div>

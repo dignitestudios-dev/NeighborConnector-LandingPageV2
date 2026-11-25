@@ -2,18 +2,14 @@ import Link from "next/link";
 import {
   ArrowRight,
   CheckCircle2,
-  Download,
   FileDown,
   HeartHandshake,
   MessageSquare,
-  PlusCircle,
-  QrCode,
   Rocket,
   ShieldCheck,
   Smartphone,
   Sparkles,
   UserCheck,
-  Users,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Reveal } from "@/components/Reveal";
@@ -24,29 +20,8 @@ import { RoadmapStepper } from "@/components/RoadmapStepper";
 export const metadata = {
   title: "Getting Started Guide — How It Works | NeighborConnector™",
   description:
-    "Your step-by-step guide to downloading NeighborConnector™, creating your profile, setting up private circles, posting updates and discovering what makes Circle Living different.",
+    "Your step-by-step guide to downloading NeighborConnector™, setting up your circles and posting updates.",
 };
-
-const SCREENSHOTS = [
-  {
-    title: "Circle Home & Daily Check-In",
-    desc: "One-tap reassurance for family and neighbors each morning.",
-    webp: "/assets/hero.webp",
-    fallback: "/assets/hero.png",
-  },
-  {
-    title: "Coordinate Life & Outings",
-    desc: "Discreet requests for rides, chores and everyday mutual aid.",
-    webp: "/assets/how-it-works.webp",
-    fallback: "/assets/how-it-works.png",
-  },
-  {
-    title: "Private Circle Feed",
-    desc: "Quiet, ad-free updates shared only with people you approve.",
-    webp: "/assets/features.webp",
-    fallback: "/assets/features.png",
-  },
-];
 
 export default function GettingStartedGuidePage() {
   return (
@@ -121,7 +96,7 @@ export default function GettingStartedGuidePage() {
                   </div>
 
                   <h2 className="text-3xl font-extrabold text-ink sm:text-4xl">
-                    Downloading the App
+                    Download the App
                   </h2>
 
                   <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed">
@@ -212,23 +187,23 @@ export default function GettingStartedGuidePage() {
         </section>
 
         {/* ============================================================== */}
-        {/* PART 2: CREATING A PROFILE                                     */}
+        {/* STEP 1 (PART B): CREATING YOUR PROFILE                         */}
         {/* ============================================================== */}
         <section className="py-16 md:py-24 border-b border-hairline bg-[#FBFBF9]">
           <div className="container-page">
             <div className="max-w-3xl">
               <Reveal delay={0}>
-                <div className="flex items-center gap-2.5 mb-3">
+                {/* <div className="flex items-center gap-2.5 mb-3">
                   <span className="grid size-8 place-items-center rounded-xl bg-sprout text-leaf-deep font-bold text-sm">
-                    2
+                    1B
                   </span>
                   <span className="text-xs font-bold uppercase tracking-wider text-leaf-deep">
-                    Step Two
+                    Step One – Profile Setup
                   </span>
-                </div>
+                </div> */}
 
                 <h2 className="text-3xl font-extrabold text-ink sm:text-4xl">
-                  Creating Your Profile
+                  Create Your Profile
                 </h2>
 
                 <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed">
@@ -293,7 +268,7 @@ export default function GettingStartedGuidePage() {
         </section>
 
         {/* ============================================================== */}
-        {/* PART 3: CREATING OR JOINING A CIRCLE                          */}
+        {/* STEP 2: CREATING OR JOINING A CIRCLE                          */}
         {/* ============================================================== */}
         <section className="py-16 md:py-24 border-b border-hairline bg-white">
           <div className="container-page">
@@ -301,15 +276,15 @@ export default function GettingStartedGuidePage() {
               <Reveal delay={0}>
                 <div className="flex items-center gap-2.5 mb-3">
                   <span className="grid size-8 place-items-center rounded-xl bg-sprout text-leaf-deep font-bold text-sm">
-                    3
+                    2
                   </span>
                   <span className="text-xs font-bold uppercase tracking-wider text-leaf-deep">
-                    Step Three
+                    Step Two
                   </span>
                 </div>
 
                 <h2 className="text-3xl font-extrabold text-ink sm:text-4xl">
-                  Creating or Joining a Circle
+                  Create or Join a Circle
                 </h2>
 
                 <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed">
@@ -357,23 +332,23 @@ export default function GettingStartedGuidePage() {
         </section>
 
         {/* ============================================================== */}
-        {/* PART 4: HOW TO POST                                           */}
+        {/* STEP 3: POST & COORDINATE                                      */}
         {/* ============================================================== */}
-        <section className="py-16 md:py-24 border-b border-hairline bg-[#FBFBF9]">
+        <section className="py-16 md:py-24 border-b border-hairline bg-white">
           <div className="container-page">
             <div className="max-w-3xl">
               <Reveal delay={0}>
                 <div className="flex items-center gap-2.5 mb-3">
                   <span className="grid size-8 place-items-center rounded-xl bg-sprout text-leaf-deep font-bold text-sm">
-                    4
+                    3
                   </span>
                   <span className="text-xs font-bold uppercase tracking-wider text-leaf-deep">
-                    Step Four
+                    Step Three
                   </span>
                 </div>
 
                 <h2 className="text-3xl font-extrabold text-ink sm:text-4xl">
-                  How to Post &amp; Coordinate
+                   Post &amp; Coordinate
                 </h2>
 
                 <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed">
@@ -443,137 +418,7 @@ export default function GettingStartedGuidePage() {
         </section>
 
         {/* ============================================================== */}
-        {/* PART 5: WHAT MAKES THE APP DIFFERENT                          */}
-        {/* ============================================================== */}
-        <section className="py-16 md:py-24 border-b border-hairline bg-white">
-          <div className="container-page">
-            <div className="max-w-3xl">
-              <Reveal delay={0}>
-                <div className="flex items-center gap-2.5 mb-3">
-                  <span className="grid size-8 place-items-center rounded-xl bg-sprout text-leaf-deep font-bold text-sm">
-                    5
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-wider text-leaf-deep">
-                    Step Five
-                  </span>
-                </div>
-
-                <h2 className="text-3xl font-extrabold text-ink sm:text-4xl">
-                  What Makes NeighborConnector™ Different
-                </h2>
-
-                <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed">
-                  Traditional social apps thrive on outrage, massive anonymous feeds and ad impressions. NeighborConnector™ was designed with an opposite philosophy:
-                </p>
-              </Reveal>
-            </div>
-
-            <div className="mt-12 grid gap-6 md:grid-cols-2">
-              <Reveal delay={50}>
-                <div className="surface-card p-7 rounded-3xl border border-hairline bg-cream/40">
-                  <h3 className="text-lg font-bold text-ink mb-4 flex items-center gap-2 text-red-700">
-                    ✕ Traditional Social Platforms
-                  </h3>
-                  <ul className="space-y-3 text-sm text-ink-soft">
-                    <li className="flex items-start gap-2.5">
-                      <span className="text-red-500 font-bold">•</span>
-                      <span>Huge feeds of strangers that breed anxiety and arguments.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <span className="text-red-500 font-bold">•</span>
-                      <span>Intrusive sponsored ads and monetization of your personal data.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <span className="text-red-500 font-bold">•</span>
-                      <span>Broadcast shouting instead of local, personal mutual care.</span>
-                    </li>
-                  </ul>
-                </div>
-              </Reveal>
-
-              <Reveal delay={100}>
-                <div className="surface-card p-7 rounded-3xl border border-hairline-leaf bg-gradient-to-br from-white to-sprout/40 shadow-soft">
-                  <h3 className="text-lg font-bold text-leaf-deep mb-4 flex items-center gap-2">
-                    ✓ NeighborConnector™ Circle Living
-                  </h3>
-                  <ul className="space-y-3 text-sm text-ink font-medium">
-                    <li className="flex items-start gap-2.5">
-                      <span className="text-leaf-deep font-bold">✓</span>
-                      <span><strong>Private invite-only circles:</strong> Only people you personally approve.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <span className="text-leaf-deep font-bold">✓</span>
-                      <span><strong>Zero advertisements &amp; no data selling:</strong> Funded by a nonprofit.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <span className="text-leaf-deep font-bold">✓</span>
-                      <span><strong>Everyday mutual support:</strong> Daily check-ins, rides and chores.</span>
-                    </li>
-                  </ul>
-                </div>
-              </Reveal>
-            </div>
-          </div>
-        </section>
-
-        {/* ============================================================== */}
-        {/* PART 6: SCREENSHOTS                                           */}
-        {/* ============================================================== */}
-        <section className="py-16 md:py-24 border-b border-hairline bg-[#FBFBF9]">
-          <div className="container-page">
-            <div className="max-w-3xl mx-auto text-center">
-              <Reveal delay={0}>
-                <div className="flex items-center justify-center gap-2.5 mb-3">
-                  <span className="grid size-8 place-items-center rounded-xl bg-sprout text-leaf-deep font-bold text-sm">
-                    6
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-wider text-leaf-deep">
-                    Step Six
-                  </span>
-                </div>
-
-                <h2 className="text-3xl font-extrabold text-ink sm:text-4xl">
-                  App Screenshots &amp; Visual Tour
-                </h2>
-
-                <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed max-w-2xl mx-auto">
-                  A preview of how simple, uncluttered and large-print friendly the app is for every generation.
-                </p>
-              </Reveal>
-            </div>
-
-            <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {SCREENSHOTS.map((item, idx) => (
-                <Reveal key={item.title} delay={idx * 80}>
-                  <div className="surface-card p-6 rounded-3xl border border-hairline bg-white shadow-soft flex flex-col justify-between h-full">
-                    <div className="relative mx-auto w-full max-w-xs mb-6">
-                      <picture>
-                        <source srcSet={item.webp} type="image/webp" />
-                        <img
-                          src={item.fallback}
-                          alt={item.title}
-                          width={656}
-                          height={704}
-                          loading="lazy"
-                          className="w-full h-auto object-contain rounded-2xl drop-shadow-sm transition-transform duration-300 hover:scale-[1.02]"
-                        />
-                      </picture>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-ink">{item.title}</h3>
-                      <p className="mt-1 text-xs sm:text-sm text-ink-soft leading-relaxed">
-                        {item.desc}
-                      </p>
-                    </div>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ============================================================== */}
-        {/* PART 7: 8-STEP ROADMAP SECTION                                 */}
+        {/* ROADMAP SECTION                                                */}
         {/* ============================================================== */}
         <section id="roadmap-section" className="py-16 md:py-24 bg-white border-b border-hairline">
           <div className="container-page">

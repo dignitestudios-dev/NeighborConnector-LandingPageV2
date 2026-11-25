@@ -105,13 +105,13 @@ export function CompanionWorksheet() {
                   <Printer className="size-4" />
                   <span>Download the Companion Worksheet (FREE)</span>
                 </a>
-                <button
+                {/* <button
                   type="button"
                   onClick={handlePrint}
                   className="inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-4 py-2.5 text-sm font-medium text-ink hover:bg-mist/30 transition-all cursor-pointer"
                 >
                   Print / Save PDF
-                </button>
+                </button> */}
               </div>
             </div>
 
