@@ -26,6 +26,7 @@ import {
   Sprout,
   Compass,
   FileDown,
+  Eye,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { ConcentricRingsMatcher } from "@/components/ConcentricRingsMatcher";
@@ -34,9 +35,9 @@ import { DownloadCta } from "@/components/DownloadCta";
 import { Footer } from "@/components/Footer";
 
 export const metadata = {
-  title: "Explore the Possibilities — NeighborConnector™",
+  title: "Discover the Possibilities — NeighborConnector™",
   description:
-    "Explore the Possibilities combines How NeighborConnector™ Can Help, Who Comes to Mind, What NeighborConnector™ Can Do for YOU and Others and Why It Matters.",
+    "Discover the Possibilities combines How NeighborConnector™ Can Help, Who Comes to Mind, What NeighborConnector™ Can Do for YOU and Others and Why It Matters.",
 };
 
 /* --- PART 2 DATA --- */
@@ -151,7 +152,7 @@ const WHY_IT_MATTERS_POINTS = [
   },
 ];
 
-export default function ExploreThePossibilitiesPage() {
+export default function DiscoverThePossibilitiesPage() {
   return (
     <div className="min-h-screen bg-white text-ink antialiased selection:bg-sprout selection:text-brand overflow-x-clip w-full">
       <Navbar />
@@ -175,17 +176,27 @@ export default function ExploreThePossibilitiesPage() {
                 </span>
 
                 <h1 className="mt-5 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl lg:text-[3.25rem] lg:leading-[1.1]">
-                  Explore the <span className="text-gradient-brand">Possibilities</span>
+                  Discover the <span className="text-gradient-brand">Possibilities</span>
                 </h1>
 
                 <p className="mt-5 text-lg sm:text-xl text-ink-soft leading-relaxed max-w-2xl mx-auto">
-                  Explore the Possibilities combines How NeighborConnector™ Can Help, Who Comes to Mind, What NeighborConnector™ Can Do for YOU and Others and Why It Matters.
+                  Discover the Possibilities combines How NeighborConnector™ Can Help, Who Comes to Mind, What NeighborConnector™ Can Do for YOU and Others and Why It Matters.
                 </p>
 
-                <div className="mt-8 flex flex-wrap justify-center gap-4">
+                <div className="mt-8 flex flex-col items-center justify-center gap-3.5">
                   <a
-                    href="/assets/what-who-why-guide.pdf"
-                    download="What-Who-Why-It-Matters-Guide.pdf"
+                    href="/assets/neighbor-connector-brochure-page-2.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-brand bg-white px-7 py-3 text-sm font-semibold text-brand shadow-soft hover:bg-mist/60 transition-all hover:-translate-y-0.5"
+                  >
+                    <Eye className="size-4" />
+                    <span>View the Possibilities Guide</span>
+                  </a>
+
+                  <a
+                    href="/assets/neighbor-connector-brochure.pdf"
+                    download="Neighbor-Connector-Brochure.pdf"
                     className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white shadow-lift hover:bg-brand-bright transition-all hover:-translate-y-0.5"
                   >
                     <FileDown className="size-4" />

@@ -45,14 +45,7 @@ export function Footer() {
                   Features
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/#how-it-works"
-                  className="text-sm text-ink-soft transition-colors hover:text-brand"
-                >
-                  How It Works
-                </Link>
-              </li>
+            
               <li>
                 <Link
                   href="/#faq"
@@ -73,14 +66,14 @@ export function Footer() {
           </nav>
 
           <nav aria-label="Why & Guides Navigation">
-            <h2 className="text-sm font-semibold text-ink">Why NeighborConnector</h2>
+            <h2 className="text-sm font-semibold text-ink">Discover.Build.Connect</h2>
             <ul className="mt-4 space-y-3">
               <li>
                 <Link
                   href="/how-it-works/core-features"
                   className="text-sm text-ink-soft transition-colors hover:text-brand"
                 >
-                  Explore the Possibilities
+                  Discover the Possibilities
                 </Link>
               </li>
               {/* <li>
@@ -97,6 +90,14 @@ export function Footer() {
                   className="text-sm text-ink-soft transition-colors hover:text-brand"
                 >
                   Circle Living™
+                </Link>
+              </li>
+                <li>
+                <Link
+                  href="/#how-it-works"
+                  className="text-sm text-ink-soft transition-colors hover:text-brand"
+                >
+                  How It Works
                 </Link>
               </li>
               {/* <li>

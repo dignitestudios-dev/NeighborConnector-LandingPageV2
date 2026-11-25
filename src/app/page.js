@@ -9,6 +9,7 @@ import { Features } from "@/components/Features";
 import { HowItWorks } from "@/components/HowItWorks";
 import { UseCases } from "@/components/UseCases";
 import { PrivacyAccessibility } from "@/components/PrivacyAccessibility";
+import { AskHolly } from "@/components/AskHolly";
 import { AboutSection } from "@/components/AboutSection";
 import { FaqSection } from "@/components/FaqSection";
 import { DownloadCta } from "@/components/DownloadCta";
@@ -25,15 +26,16 @@ export default function Home() {
         <CommunityStory />
             <UseCases />
         <HomeInteractiveExplorations />
-        <Comparison />
-        <PrivacyAccessibility />
+     
         <CircleLiving />
+        <PrivacyAccessibility />
         <Features />
         <HowItWorks />
-    
-        <AboutSection />
+        <Comparison />
+        <AskHolly />
         <FaqSection />
         <DownloadCta />
+        <AboutSection />
       </main>
       <Footer />
     </div>

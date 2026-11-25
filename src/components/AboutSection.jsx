@@ -42,19 +42,20 @@ export function AboutSection() {
               Whether you begin with family, a few neighbors, friends or a community group, every Circle is an opportunity to make Connection more Intentional. Stronger Communities begin with Intentional Connection and Caring.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3">
+          
               <a
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold cursor-pointer transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed border border-hairline bg-white text-brand shadow-soft hover:-translate-y-0.5 hover:border-brand-light h-12 px-7 text-[0.95rem] text-center"
+              >
+                Contact Us
+              </a>
+                  <a
                 href="https://www.communitycarehousing.org"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold cursor-pointer transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed bg-brand text-primary-foreground shadow-lift hover:-translate-y-0.5 hover:bg-brand-bright h-12 px-7 text-[0.95rem] text-center"
               >
                 Support Our Mission
-              </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold cursor-pointer transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed border border-hairline bg-white text-brand shadow-soft hover:-translate-y-0.5 hover:border-brand-light h-12 px-7 text-[0.95rem] text-center"
-              >
-                Contact us
               </a>
             </div>
 

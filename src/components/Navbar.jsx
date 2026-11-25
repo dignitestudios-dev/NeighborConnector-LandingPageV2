@@ -27,7 +27,7 @@ import clsx from "clsx";
 
 const WHY_DROPDOWN = [
   {
-    title: "Explore the Possibilities",
+    title: "Discover the Possibilities",
     description: "Combines How NC Can Help, Who Comes to Mind, What It Can Do & Why It Matters",
     href: "/how-it-works/core-features",
     icon: Compass,

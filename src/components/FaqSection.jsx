@@ -281,7 +281,7 @@ export function FaqSection() {
 
             <p className="mt-4 text-base text-ink-soft leading-relaxed text-center md:text-lg max-w-2xl mx-auto">
               Holly can help you find answers to some common questions about
-              NeighborConnector™ and how to get started building your circle today.
+              NeighborConnector™ and how to get started building your Circles today.
             </p>
           </Reveal>
         </div>

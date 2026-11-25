@@ -56,7 +56,8 @@ export default function ContactPage() {
                 We’d Love to Hear From You
               </h1>
               <p className="mt-4 text-base sm:text-lg text-[#4A5D5A]">
-                Have questions about NeighborConnector™, want to bring circles to your neighborhood, or looking to partner with Community Care Housing Foundation? Reach out anytime.
+              Have questions about NeighborConnectorTM or want to learn more or looking for ways to
+partner with Community Care Housing? Please reach out anytime.
               </p>
             </div>
           </Reveal>
